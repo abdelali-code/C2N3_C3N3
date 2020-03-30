@@ -1,0 +1,36 @@
+{
+  "name": "c2n3_c3n3_ind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run start:server && npm run watch:sass  ",
+    "watch:sass": "gulp watch:sass",
+    "start:server": "gulp startServer",
+    "process:js": "gulp process:js",
+    "compile:sass": "gulp compile:sass",
+    "build": "npm run process:js && npm run compile:sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdelali-code/C2N3_C3N3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdelali-code/C2N3_C3N3/issues"
+  },
+  "homepage": "https://github.com/abdelali-code/C2N3_C3N3#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^4.13.1"
+  }
+}
