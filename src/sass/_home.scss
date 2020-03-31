@@ -1,0 +1,69 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-image: url("../images/Merged\ bar-1.svg");
+  background-size: cover;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 88px;
+  .navbar--items {
+    max-width: 320px;
+    flex: 3;
+    justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-right: 24px;
+    li {
+      padding: 5px 10px;
+      a {
+        text-decoration: none;
+        color: $black_color;
+      }
+    }
+  }
+}
+
+.navbar--items--btn {
+  border: 2px solid $main_color;
+  align-self: start;
+  border-radius: 10px;
+
+  span {
+    margin-right: 8px;
+    position: relative;
+    bottom: 7px;
+  }
+}
+
+// section hero
+.hero {
+  margin-top: 88px;
+}
+.hero--warning {
+  background-color: $warning_color;
+  padding: 20px;
+
+  .hero--warning--title,
+  .hero--warning-description {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hero--warning--title {
+    padding: 15px 0px;
+  }
+}
+// end section hero
+
+// illustartion part
+.illustration {
+  .illustration__title {
+    @extend %limited_width;
+  }
+}
+// end of illustartion part

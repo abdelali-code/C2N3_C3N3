@@ -1,11 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>corona virus ....</title>
   </head>
   <body>
-    <h1>Helo world</h1>
+    <!-- navigation -->
+    <nav class="navbar">
+      <a href="#" class="c"
+        ><img src="./images/logo__sante-1.svg" alt="ministre de santé"
+      /></a>
+      <ul class="navbar--items">
+        <li><a href="conseil.html" class="active">Conseil</a></li>
+        <li><a href="#">Acceuil</a></li>
+        <li class="navbar--items--btn">
+          <a href="#"
+            ><span>عربي</span
+            ><img src="./images/www.svg" alt="" class="navbar--items--btn-img"
+          /></a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <!-- warning  and hero section-->
+      <section class="hero">
+        <div class="hero--warning">
+          <h3 class="hero--warning--title">LA DERNIÈRE INFO MÉDICALE</h3>
+          <p class="hero--warning-description">
+            La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait
+            être un facteur d'aggravation de l’infection. En cas de fièvre,
+            prenez du paracétamol. N'arrêtez pas votre traitement ! Consultez
+            votre médecin ou votre pharmacien
+          </p>
+        </div>
+        <!-- illustration -->
+        <div class="container illustration">
+          <h3 class="illustration__title">
+            Comment se protéger et protéger les autres au quotidien ?
+          </h3>
+          <div class="wrapper">
+            <div class="wrapper-item">
+              <p>Saluez sans serrer la main, n'embrassez personne</p>
+            </div>
+            <div class="wrapper-item"></div>
+            <div class="wrapper-item"></div>
+            <div class="wrapper-item"></div>
+            <div class="wrapper-item"></div>
+            <div class="wrapper-item"></div>
+            <div class="wrapper-item"></div>
+          </div>
+        </div>
+        <!-- end of illustration -->
+      </section>
+    </main>
+
+    <script src="scripts/main.js"></script>
   </body>
 </html>

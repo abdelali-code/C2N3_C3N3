@@ -21,7 +21,7 @@ function watchSass() {
 function serve() {
   return browserSync.init({
     server: "src",
-    open: false,
+    open: true,
     port: 3003
   });
 }
