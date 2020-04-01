@@ -35,3 +35,10 @@ body {
   padding: 20px 0px;
   color: $secondary_color;
 }
+
+%btn {
+  padding: 15px;
+  color: $white_color;
+  border-radius: 10px;
+  text-align: center;
+}

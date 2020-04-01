@@ -30,6 +30,12 @@ body {
   padding: 20px 0px;
   color: #1078ad; }
 
+.information-wrapper .information--covidsite a, .information-wrapper .information-advices a {
+  padding: 15px;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center; }
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -39,6 +45,8 @@ nav {
   background-size: cover;
   align-items: center;
   position: fixed;
+  z-index: 2;
+  background-color: #96c5dc;
   top: 0;
   width: 100%;
   height: 88px; }
@@ -57,11 +65,12 @@ nav {
         color: #000; }
 
 .navbar--items--btn {
-  border: 2px solid #96c5dc;
+  border: 2px solid #1078ad;
   align-self: start;
   border-radius: 10px; }
   .navbar--items--btn span {
     margin-right: 8px;
+    color: #1078ad;
     position: relative;
     bottom: 7px; }
 
@@ -78,3 +87,41 @@ nav {
     text-align: center; }
   .hero--warning .hero--warning--title {
     padding: 15px 0px; }
+
+.advises {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 300px;
+  text-align: center;
+  flex-wrap: wrap; }
+  .advises .advises-item {
+    width: 300px;
+    margin: 0 auto; }
+    .advises .advises-item p {
+      padding: 20px; }
+
+.stay-atHome {
+  width: 300px;
+  align-items: center;
+  min-height: 300px;
+  text-align: center;
+  margin: 0 auto; }
+  .stay-atHome p {
+    padding: 20px 10px; }
+
+.information {
+  background-color: #96c5dc; }
+
+.information-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0px;
+  text-align: center; }
+  .information-wrapper .information--covidsite a {
+    background-color: #1078ad;
+    text-decoration: none; }
+  .information-wrapper .information-advices a {
+    background-color: #1078ad;
+    text-decoration: none; }
