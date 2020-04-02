@@ -10,8 +10,9 @@
 
 body {
   font-size: 16px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  line-height: 1.7; }
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.7;
+  font-weight: bold; }
 
 .container {
   max-width: 1370px;
@@ -35,6 +36,14 @@ body {
   color: #fff;
   border-radius: 10px;
   text-align: center; }
+
+.title {
+  margin: 0 auto;
+  max-width: 580px;
+  text-align: center;
+  font-size: 30px;
+  padding: 20px 0px;
+  color: #1078ad; }
 
 nav {
   display: flex;
@@ -84,9 +93,13 @@ nav {
   .hero--warning .hero--warning-description {
     max-width: 700px;
     margin: 0 auto;
-    text-align: center; }
+    text-align: center;
+    color: #1078ad; }
   .hero--warning .hero--warning--title {
     padding: 15px 0px; }
+
+.illustration {
+  color: #1078ad; }
 
 .advises {
   display: flex;
@@ -111,17 +124,51 @@ nav {
     padding: 20px 10px; }
 
 .information {
+  color: #1078ad;
   background-color: #96c5dc; }
 
 .information-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 28px 0px;
-  text-align: center; }
+  text-align: center;
+  flex-wrap: wrap;
+  min-height: 300px; }
+  .information-wrapper div {
+    min-width: 300px;
+    margin: 0 auto; }
+  .information-wrapper h3 {
+    padding: 15px 0px;
+    font-size: 28px;
+    color: #1078ad; }
   .information-wrapper .information--covidsite a {
     background-color: #1078ad;
     text-decoration: none; }
   .information-wrapper .information-advices a {
     background-color: #1078ad;
     text-decoration: none; }
+
+.symptomes--container {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-between;
+  padding: 20px 0px; }
+  .symptomes--container div {
+    min-width: 250px;
+    margin: 0 auto; }
+    .symptomes--container div p {
+      padding: 15px 0px; }
+
+.transmition-factors {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 28px 0px; }
+  .transmition-factors div {
+    max-width: 300px; }

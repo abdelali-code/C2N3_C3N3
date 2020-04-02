@@ -12,8 +12,9 @@
 
 body {
   font-size: 16px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.7;
+  font-weight: bold;
 }
 
 .container {
@@ -41,4 +42,13 @@ body {
   color: $white_color;
   border-radius: 10px;
   text-align: center;
+}
+
+.title {
+  margin: 0 auto;
+  max-width: 580px;
+  text-align: center;
+  font-size: 30px;
+  padding: 20px 0px;
+  color: $secondary_color;
 }

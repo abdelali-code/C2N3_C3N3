@@ -56,6 +56,7 @@ nav {
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
+    color: $secondary_color;
   }
   .hero--warning--title {
     padding: 15px 0px;
@@ -65,6 +66,7 @@ nav {
 
 // illustartion part
 .illustration {
+  color: $secondary_color;
   .illustration__title {
     @extend %limited_width;
   }
@@ -101,14 +103,28 @@ nav {
 
 // informatin section
 .information {
+  color: $secondary_color;
   background-color: $main_color;
 }
 .information-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 28px 0px;
+  // padding: 28px 0px;
   text-align: center;
+  flex-wrap: wrap;
+  min-height: 300px;
+
+  div {
+    min-width: 300px;
+    margin: 0 auto;
+  }
+
+  h3 {
+    padding: 15px 0px;
+    font-size: 28px;
+    color: $secondary_color;
+  }
 
   .information--covidsite a {
     background-color: $secondary_color;
@@ -121,3 +137,41 @@ nav {
     @extend %btn;
   }
 }
+
+// symptomes
+.symptomes--container {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-between;
+  padding: 20px 0px;
+
+  div {
+    min-width: 250px;
+    margin: 0 auto;
+    p {
+      padding: 15px 0px;
+    }
+  }
+}
+
+// end of symptomes
+
+// transmition
+.transmition-factors {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 28px 0px;
+
+  div {
+    max-width: 300px;
+  }
+}
+
+// end transmition
