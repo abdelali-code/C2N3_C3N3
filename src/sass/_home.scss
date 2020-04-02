@@ -49,7 +49,7 @@ nav {
 }
 .hero--warning {
   background-color: $warning_color;
-  padding: 20px;
+  padding: 20px 10px;
 
   .hero--warning--title,
   .hero--warning-description {
@@ -64,114 +64,109 @@ nav {
 }
 // end section hero
 
-// illustartion part
-.illustration {
+//comment protger section
+.proteger {
+  background-color: $white_color;
   color: $secondary_color;
-  .illustration__title {
-    @extend %limited_width;
+  .proteger-items {
+    @extend %flex;
   }
 }
 
-.advises {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 300px;
-  text-align: center;
-  flex-wrap: wrap;
+//end of comment protger section
 
-  .advises-item {
-    width: 300px;
-    margin: 0 auto;
-
-    p {
-      padding: 20px;
+// information
+.information {
+  background-color: $main_color;
+  color: $secondary_color;
+  .information-types {
+    @extend %flex;
+    align-items: center;
+    // margin-top: auto;
+    a {
+      text-decoration: none;
+      @extend %btn;
+      display: block;
+      width: 250px;
+      margin: 0 auto;
+      background-color: $secondary_color;
     }
   }
 }
-.stay-atHome {
-  width: 300px;
-  align-items: center;
-  min-height: 300px;
-  text-align: center;
-  margin: 0 auto;
-  p {
-    padding: 20px 10px;
-  }
-}
-// end of illustartion part
+// end of information
 
-// informatin section
-.information {
-  color: $secondary_color;
-  background-color: $main_color;
-}
-.information-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  // padding: 28px 0px;
-  text-align: center;
-  flex-wrap: wrap;
-  min-height: 300px;
-
-  div {
-    min-width: 300px;
-    margin: 0 auto;
-  }
-
+// symptomes section
+.symptomes {
   h3 {
-    padding: 15px 0px;
-    font-size: 28px;
-    color: $secondary_color;
+    width: 100% !important;
   }
-
-  .information--covidsite a {
-    background-color: $secondary_color;
-    text-decoration: none;
-    @extend %btn;
-  }
-  .information-advices a {
-    background-color: $secondary_color;
-    text-decoration: none;
-    @extend %btn;
+  .symptomes--types {
+    font-family: "Cairo", sans-serif;
+    font-size: 20px;
+    max-width: 580px;
+    @extend %flex;
+    .figure {
+      min-width: 250px;
+    }
+    .img_container {
+      height: 150px;
+    }
   }
 }
 
-// symptomes
-.symptomes--container {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  justify-content: space-between;
+.symptomes--transmition {
+  color: $secondary_color;
+  .symptomes--transmition-items {
+    @extend %flex;
+    max-width: 900px;
+  }
+}
+// end of symptomes section
+
+// recommandations
+.recommandations {
+  font-family: "Cairo", sans-serif;
+  font-size: 20px;
+  background-color: $secondary_color;
   padding: 20px 0px;
 
-  div {
-    min-width: 250px;
-    margin: 0 auto;
-    p {
-      padding: 15px 0px;
+  h3 {
+    color: $white_color;
+  }
+  .recommandations-desc {
+    @extend %flex;
+    text-align: start;
+    @media (max-width: 700px) {
+      justify-content: center;
+      text-align: center;
+    }
+
+    .recommandations--list {
+      ul {
+        list-style: none;
+        color: $white_color;
+      }
+    }
+    .recommandations--contact {
+      text-align: center;
+      h3 {
+        color: $warning_color;
+      }
+      a {
+        display: block;
+        margin-top: 20px;
+        text-decoration: none;
+      }
+      .recommandations--contact-phone {
+        background-color: $warning_color;
+        text-align: center;
+        padding: 10px 20px;
+      }
+      .recommandations--contact-site {
+        color: $white_color;
+        border-bottom: 1px solid $warning_color;
+      }
     }
   }
 }
-
-// end of symptomes
-
-// transmition
-.transmition-factors {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 28px 0px;
-
-  div {
-    max-width: 300px;
-  }
-}
-
-// end transmition
+// end of recommandations

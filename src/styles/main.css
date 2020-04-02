@@ -23,7 +23,7 @@ body {
 .active {
   color: #1078ad !important; }
 
-.illustration .illustration__title {
+.fixed_width {
   max-width: 580px;
   margin: 0 auto;
   text-align: center;
@@ -31,19 +31,39 @@ body {
   padding: 20px 0px;
   color: #1078ad; }
 
-.information-wrapper .information--covidsite a, .information-wrapper .information-advices a {
-  padding: 15px;
+.title {
+  text-align: center;
+  font-size: 30px;
+  padding: 20px 0px;
+  color: #1078ad; }
+
+.information .information-types a {
+  padding: 15px 20px;
   color: #fff;
   border-radius: 10px;
   text-align: center; }
 
-.title {
+.wrapper, .proteger .proteger-items, .information .information-types, .symptomes .symptomes--types, .symptomes--transmition .symptomes--transmition-items, .recommandations .recommandations-desc {
+  display: flex;
   margin: 0 auto;
-  max-width: 580px;
+  flex-wrap: wrap;
   text-align: center;
-  font-size: 30px;
-  padding: 20px 0px;
-  color: #1078ad; }
+  justify-content: space-between; }
+
+.wrapper {
+  max-width: 580px;
+  margin: 20px 0px; }
+
+.img_container {
+  height: 120px; }
+
+.figure {
+  width: 33.33333%;
+  min-width: 320px;
+  margin: 20px auto; }
+
+.caption {
+  padding: 20px 0px; }
 
 nav {
   display: flex;
@@ -88,7 +108,7 @@ nav {
 
 .hero--warning {
   background-color: #f4cf1b;
-  padding: 20px; }
+  padding: 20px 10px; }
   .hero--warning .hero--warning--title,
   .hero--warning .hero--warning-description {
     max-width: 700px;
@@ -98,77 +118,67 @@ nav {
   .hero--warning .hero--warning--title {
     padding: 15px 0px; }
 
-.illustration {
+.proteger {
+  background-color: #fff;
   color: #1078ad; }
 
-.advises {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 300px;
-  text-align: center;
-  flex-wrap: wrap; }
-  .advises .advises-item {
-    width: 300px;
-    margin: 0 auto; }
-    .advises .advises-item p {
-      padding: 20px; }
-
-.stay-atHome {
-  width: 300px;
-  align-items: center;
-  min-height: 300px;
-  text-align: center;
-  margin: 0 auto; }
-  .stay-atHome p {
-    padding: 20px 10px; }
-
 .information {
-  color: #1078ad;
-  background-color: #96c5dc; }
+  background-color: #96c5dc;
+  color: #1078ad; }
+  .information .information-types {
+    align-items: center; }
+    .information .information-types a {
+      text-decoration: none;
+      display: block;
+      width: 250px;
+      margin: 0 auto;
+      background-color: #1078ad; }
 
-.information-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  flex-wrap: wrap;
-  min-height: 300px; }
-  .information-wrapper div {
-    min-width: 300px;
-    margin: 0 auto; }
-  .information-wrapper h3 {
-    padding: 15px 0px;
-    font-size: 28px;
-    color: #1078ad; }
-  .information-wrapper .information--covidsite a {
-    background-color: #1078ad;
-    text-decoration: none; }
-  .information-wrapper .information-advices a {
-    background-color: #1078ad;
-    text-decoration: none; }
+.symptomes h3 {
+  width: 100% !important; }
 
-.symptomes--container {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  justify-content: space-between;
+.symptomes .symptomes--types {
+  font-family: "Cairo", sans-serif;
+  font-size: 20px;
+  max-width: 580px; }
+  .symptomes .symptomes--types .figure {
+    min-width: 250px; }
+  .symptomes .symptomes--types .img_container {
+    height: 150px; }
+
+.symptomes--transmition {
+  color: #1078ad; }
+  .symptomes--transmition .symptomes--transmition-items {
+    max-width: 900px; }
+
+.recommandations {
+  font-family: "Cairo", sans-serif;
+  font-size: 20px;
+  background-color: #1078ad;
   padding: 20px 0px; }
-  .symptomes--container div {
-    min-width: 250px;
-    margin: 0 auto; }
-    .symptomes--container div p {
-      padding: 15px 0px; }
-
-.transmition-factors {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 28px 0px; }
-  .transmition-factors div {
-    max-width: 300px; }
+  .recommandations h3 {
+    color: #fff; }
+  .recommandations .recommandations-desc {
+    text-align: start; }
+    @media (max-width: 700px) {
+      .recommandations .recommandations-desc {
+        justify-content: center;
+        text-align: center; } }
+    .recommandations .recommandations-desc .recommandations--list ul {
+      list-style: none;
+      color: #fff; }
+    .recommandations .recommandations-desc .recommandations--contact {
+      text-align: center; }
+      .recommandations .recommandations-desc .recommandations--contact h3 {
+        color: #f4cf1b; }
+      .recommandations .recommandations-desc .recommandations--contact a {
+        display: block;
+        margin-top: 20px;
+        text-decoration: none; }
+      .recommandations .recommandations-desc .recommandations--contact .recommandations--contact-phone {
+        background-color: #f4cf1b;
+        text-align: center;
+        padding: 10px 20px; }
+      .recommandations .recommandations-desc .recommandations--contact .recommandations--contact-site {
+        color: #fff;
+        border-bottom: 1px solid #f4cf1b; }
