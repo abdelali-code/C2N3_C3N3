@@ -13,6 +13,9 @@ body {
   font-family: "Open Sans", sans-serif;
   line-height: 1.7;
   font-weight: bold; }
+  @media (max-width: 667px) {
+    body {
+      font-size: 14px; } }
 
 .container {
   max-width: 1370px;
@@ -36,6 +39,9 @@ body {
   font-size: 30px;
   padding: 20px 0px;
   color: #1078ad; }
+  @media (max-width: 667px) {
+    .title {
+      font-size: 24px; } }
 
 .information .information-types a, .demande-test a {
   padding: 15px 20px;
@@ -56,14 +62,27 @@ body {
 
 .img_container {
   height: 120px; }
+  @media (max-width: 767px) {
+    .img_container {
+      height: 90px; } }
+  @media (max-width: 767px) {
+    .img_container img {
+      width: 25%; } }
+  @media (max-width: 420px) {
+    .img_container img {
+      width: 50%; } }
 
 .figure {
   width: 33.33333%;
   min-width: 320px;
   margin: 20px auto; }
+  @media (max-width: 767px) {
+    .figure {
+      width: 45%;
+      min-width: 170px; } }
 
 .caption {
-  padding: 20px 0px; }
+  padding: 20px 10px; }
 
 .navbar--items--btn {
   border: 2px solid #1078ad;
@@ -170,14 +189,24 @@ nav {
 .information {
   background-color: #96c5dc;
   color: #1078ad; }
+  @media (max-width: 767px) {
+    .information .figure {
+      width: 100%; } }
   .information .information-types {
     align-items: center; }
+    @media (max-width: 767px) {
+      .information .information-types {
+        flex-direction: column; } }
     .information .information-types a {
       text-decoration: none;
       display: block;
       width: 250px;
       margin: 0 auto;
       background-color: #1078ad; }
+      @media (max-width: 767px) {
+        .information .information-types a {
+          width: 80%;
+          margin: 0 auto; } }
 
 .symptomes h3 {
   width: 100% !important; }
@@ -188,8 +217,14 @@ nav {
   max-width: 580px; }
   .symptomes .symptomes--types .figure {
     min-width: 250px; }
+    @media (max-width: 420px) {
+      .symptomes .symptomes--types .figure {
+        min-width: 170px; } }
   .symptomes .symptomes--types .img_container {
     height: 150px; }
+    @media (max-width: 520px) {
+      .symptomes .symptomes--types .img_container {
+        height: 100px; } }
 
 .symptomes--transmition {
   color: #1078ad; }

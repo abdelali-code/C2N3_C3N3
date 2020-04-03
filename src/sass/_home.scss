@@ -66,10 +66,18 @@ nav {
 .information {
   background-color: $main_color;
   color: $secondary_color;
+  .figure {
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
   .information-types {
     @extend %flex;
     align-items: center;
     // margin-top: auto;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
     a {
       text-decoration: none;
       @extend %btn;
@@ -77,6 +85,10 @@ nav {
       width: 250px;
       margin: 0 auto;
       background-color: $secondary_color;
+      @media (max-width: 767px) {
+        width: 80%;
+        margin: 0 auto;
+      }
     }
   }
 }
@@ -94,9 +106,15 @@ nav {
     @extend %flex;
     .figure {
       min-width: 250px;
+      @media (max-width: 420px) {
+        min-width: 170px;
+      }
     }
     .img_container {
       height: 150px;
+      @media (max-width: 520px) {
+        height: 100px;
+      }
     }
   }
 }
