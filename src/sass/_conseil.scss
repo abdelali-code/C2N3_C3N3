@@ -1,0 +1,191 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-image: url("../images/Merged\ bar-1.svg");
+  background-size: cover;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  background-color: $main_color;
+  top: 0;
+  width: 100%;
+  height: 88px;
+  .navbar--items {
+    max-width: 320px;
+    flex: 3;
+    justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-right: 24px;
+    li {
+      padding: 5px 10px;
+      a {
+        text-decoration: none;
+        color: $black_color;
+      }
+    }
+  }
+}
+
+// section hero
+.hero {
+  margin-top: 88px;
+}
+.hero--warning {
+  background-color: $warning_color;
+  padding: 20px 10px;
+
+  .hero--warning--title,
+  .hero--warning-description {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    color: $secondary_color;
+  }
+  .hero--warning--title {
+    padding: 15px 0px;
+  }
+}
+// end section hero
+
+//comment protger section
+.proteger {
+  background-color: $white_color;
+  color: $secondary_color;
+  .proteger-items {
+    @extend %flex;
+  }
+}
+
+//end of comment protger section
+
+// information
+.information {
+  background-color: $main_color;
+  color: $secondary_color;
+  .figure {
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+  .information-types {
+    @extend %flex;
+    align-items: center;
+    // margin-top: auto;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+    a {
+      text-decoration: none;
+      @extend %btn;
+      display: block;
+      width: 250px;
+      margin: 0 auto;
+      background-color: $secondary_color;
+      @media (max-width: 767px) {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+// end of information
+
+// symptomes section
+.symptomes {
+  h3 {
+    width: 100% !important;
+  }
+  .symptomes--types {
+    font-family: "Cairo", sans-serif;
+    font-size: 20px;
+    max-width: 580px;
+    @extend %flex;
+    .figure {
+      min-width: 250px;
+      @media (max-width: 420px) {
+        min-width: 170px;
+      }
+    }
+    .img_container {
+      height: 150px;
+      @media (max-width: 520px) {
+        height: 100px;
+      }
+    }
+  }
+}
+
+.symptomes--transmition {
+  color: $secondary_color;
+  .symptomes--transmition-items {
+    @extend %flex;
+    max-width: 900px;
+  }
+}
+// end of symptomes section
+
+// recommandations
+.recommandations {
+  font-family: "Cairo", sans-serif;
+  font-size: 20px;
+  background-color: $secondary_color;
+  padding: 20px 0px;
+
+  h3 {
+    color: $white_color;
+  }
+  .recommandations-desc {
+    @extend %flex;
+    text-align: start;
+    @media (max-width: 700px) {
+      justify-content: center;
+      text-align: center;
+    }
+
+    .recommandations--list {
+      ul {
+        list-style: none;
+        color: $white_color;
+      }
+    }
+    .recommandations--contact {
+      text-align: center;
+      h3 {
+        color: $warning_color;
+      }
+      a {
+        display: block;
+        margin-top: 20px;
+        text-decoration: none;
+      }
+      .recommandations--contact-phone {
+        background-color: $warning_color;
+        text-align: center;
+        padding: 10px 20px;
+      }
+      .recommandations--contact-site {
+        color: $white_color;
+        border-bottom: 1px solid $warning_color;
+      }
+    }
+  }
+}
+// end of recommandations
+
+// demande test
+.demande-test {
+  background-color: $main_color;
+  text-align: center;
+  padding-bottom: 20px;
+  // a {
+  // }
+}
+//end demande-test
+
+// footer
+
+// end footer
