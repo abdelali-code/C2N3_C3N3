@@ -28,6 +28,13 @@ body {
   color: $secondary_color !important;
 }
 
+%link_btn {
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  background-color: $secondary_color;
+}
+
 .fixed_width {
   max-width: 580px;
   margin: 0 auto;
@@ -82,3 +89,75 @@ body {
 // .figure {
 //   width: 300px;
 // }
+
+// langue btn
+
+.navbar--items--btn {
+  border: 2px solid $secondary_color;
+  align-self: start;
+  border-radius: 10px;
+  padding-top: 5px;
+
+  span {
+    margin-right: 8px;
+    color: $secondary_color;
+    position: relative;
+    bottom: 7px;
+  }
+}
+
+footer {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.footer--content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+
+  .title {
+    font-size: 18px;
+    margin-top: 24px;
+  }
+}
+
+.nav {
+  width: 90px;
+  ul {
+    list-style: none;
+    li {
+      margin-bottom: 16px;
+      a {
+        color: $black_color;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.footer--contact {
+  flex: 3;
+  margin-left: 20px !important;
+  min-width: 230px;
+  margin: 0 auto;
+  p {
+    margin-bottom: 10px;
+  }
+  .phone-num {
+    color: $green_color;
+  }
+}
+.footer-info {
+  flex: 4;
+  min-width: 350px;
+  font-weight: normal;
+  text-align: start;
+}
+
+.footer--foot {
+  height: 32px;
+  background-color: $secondary_color;
+}

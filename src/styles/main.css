@@ -37,7 +37,7 @@ body {
   padding: 20px 0px;
   color: #1078ad; }
 
-.information .information-types a {
+.information .information-types a, .demande-test a {
   padding: 15px 20px;
   color: #fff;
   border-radius: 10px;
@@ -64,6 +64,61 @@ body {
 
 .caption {
   padding: 20px 0px; }
+
+.navbar--items--btn {
+  border: 2px solid #1078ad;
+  align-self: start;
+  border-radius: 10px;
+  padding-top: 5px; }
+  .navbar--items--btn span {
+    margin-right: 8px;
+    color: #1078ad;
+    position: relative;
+    bottom: 7px; }
+
+footer {
+  text-align: center;
+  padding-top: 20px; }
+
+.footer--content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px; }
+  .footer--content .title {
+    font-size: 18px;
+    margin-top: 24px; }
+
+.nav {
+  width: 90px; }
+  .nav ul {
+    list-style: none; }
+    .nav ul li {
+      margin-bottom: 16px; }
+      .nav ul li a {
+        color: #000;
+        text-decoration: none; }
+
+.footer--contact {
+  flex: 3;
+  margin-left: 20px !important;
+  min-width: 230px;
+  margin: 0 auto; }
+  .footer--contact p {
+    margin-bottom: 10px; }
+  .footer--contact .phone-num {
+    color: #369d53; }
+
+.footer-info {
+  flex: 4;
+  min-width: 350px;
+  font-weight: normal;
+  text-align: start; }
+
+.footer--foot {
+  height: 32px;
+  background-color: #1078ad; }
 
 nav {
   display: flex;
@@ -92,16 +147,6 @@ nav {
       nav .navbar--items li a {
         text-decoration: none;
         color: #000; }
-
-.navbar--items--btn {
-  border: 2px solid #1078ad;
-  align-self: start;
-  border-radius: 10px; }
-  .navbar--items--btn span {
-    margin-right: 8px;
-    color: #1078ad;
-    position: relative;
-    bottom: 7px; }
 
 .hero {
   margin-top: 88px; }
@@ -182,3 +227,15 @@ nav {
       .recommandations .recommandations-desc .recommandations--contact .recommandations--contact-site {
         color: #fff;
         border-bottom: 1px solid #f4cf1b; }
+
+.demande-test {
+  background-color: #96c5dc;
+  text-align: center;
+  padding-bottom: 20px; }
+  .demande-test a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #1078ad;
+    width: 50%;
+    margin: 10px auto; }

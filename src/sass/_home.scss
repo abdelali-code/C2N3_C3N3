@@ -30,19 +30,6 @@ nav {
   }
 }
 
-.navbar--items--btn {
-  border: 2px solid $secondary_color;
-  align-self: start;
-  border-radius: 10px;
-
-  span {
-    margin-right: 8px;
-    color: $secondary_color;
-    position: relative;
-    bottom: 7px;
-  }
-}
-
 // section hero
 .hero {
   margin-top: 88px;
@@ -170,3 +157,24 @@ nav {
   }
 }
 // end of recommandations
+
+// demande test
+.demande-test {
+  background-color: $main_color;
+  text-align: center;
+  padding-bottom: 20px;
+  a {
+    display: block;
+    @extend %btn;
+    text-decoration: none;
+    color: $white_color;
+    background-color: $secondary_color;
+    width: 50%;
+    margin: 10px auto;
+  }
+}
+//end demande-test
+
+// footer
+
+// end footer
