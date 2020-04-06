@@ -32,7 +32,7 @@ nav {
 
 // section hero
 .hero {
-  margin-top: 88px;
+  // margin-top: 88px;
 }
 .hero--warning {
   background-color: $warning_color;
@@ -66,6 +66,7 @@ nav {
 .information {
   background-color: $main_color;
   color: $secondary_color;
+  padding: 20px 0px;
   .figure {
     @media (max-width: 767px) {
       width: 100%;

@@ -14,7 +14,7 @@ body {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   line-height: 1.7;
-  font-weight: bold;
+  font-weight: bolder;
   @media (max-width: 667px) {
     font-size: 14px;
   }
@@ -191,4 +191,17 @@ footer {
   background-color: $secondary_color;
   width: 50%;
   margin: 10px auto;
+}
+
+hr {
+  height: 4px;
+  width: 70%;
+  margin: 0 auto;
+  border: none;
+  border-radius: 10px;
+  background-color: $warning_color;
+}
+
+nav + main {
+  margin-top: 88px;
 }

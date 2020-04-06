@@ -317,7 +317,7 @@ body {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   line-height: 1.7;
-  font-weight: bold; }
+  font-weight: bolder; }
   @media (max-width: 667px) {
     body {
       font-size: 14px; } }
@@ -452,6 +452,95 @@ footer {
   width: 50%;
   margin: 10px auto; }
 
+hr {
+  height: 4px;
+  width: 70%;
+  margin: 0 auto;
+  border: none;
+  border-radius: 10px;
+  background-color: #f4cf1b; }
+
+nav + main {
+  margin-top: 88px; }
+
+.error {
+  margin-top: 88px;
+  padding: 28px 0px;
+  text-align: center; }
+  .error img {
+    padding: 20px; }
+  .error p,
+  .error a {
+    font-family: "Cairo", sans-serif; }
+
+.progress-bar {
+  width: 350px;
+  margin: 124px auto 24px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .progress-bar .second-circle-container {
+    display: inline-block;
+    position: relative;
+    left: 138px;
+    bottom: 11px; }
+  .progress-bar .line {
+    width: 300px;
+    height: 3px;
+    background-color: #369d53; }
+  .progress-bar i {
+    display: inline-block;
+    height: 8px;
+    width: 9px;
+    background-color: #1078ad;
+    border-radius: 50%;
+    margin-bottom: 3px; }
+    @media (max-width: 676px) {
+      .progress-bar i {
+        margin-bottom: 1px; } }
+
+.progress-bar-description {
+  max-width: 370px;
+  margin: 0px auto;
+  font-size: 12px; }
+  .progress-bar-description p {
+    display: inline-block;
+    position: relative;
+    bottom: 15px; }
+  .progress-bar-description .progress-bar-description--second {
+    margin-left: 60px; }
+  .progress-bar-description .progress-bar-description--third {
+    margin-left: 80px; }
+    @media (max-width: 380px) {
+      .progress-bar-description .progress-bar-description--third {
+        margin-left: 50px; } }
+
+#app {
+  padding: 24px 0px; }
+
+.preambule {
+  background-color: #96c5dc;
+  margin: 24px 0px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Cairo", sans-serif; }
+  .preambule p {
+    padding: 24px;
+    line-height: 2; }
+
+.add_main_color {
+  background-color: #96c5dc; }
+
+.add_warning_color {
+  background-color: #f4cf1b !important; }
+
+.progress-bar span {
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; }
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -480,9 +569,6 @@ nav {
         text-decoration: none;
         color: #000; }
 
-.hero {
-  margin-top: 88px; }
-
 .hero--warning {
   background-color: #f4cf1b;
   padding: 20px 10px; }
@@ -501,7 +587,8 @@ nav {
 
 .information {
   background-color: #96c5dc;
-  color: #1078ad; }
+  color: #1078ad;
+  padding: 20px 0px; }
   @media (max-width: 767px) {
     .information .figure {
       width: 100%; } }
@@ -584,15 +671,26 @@ nav {
 .doctor-photo--container {
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  padding: 20px 0px; }
   @media (max-width: 767px) {
     .doctor-photo--container {
       flex-direction: column; } }
   .doctor-photo--container div {
     width: 50%;
+    font-family: "Cairo", sans-serif;
     text-align: center; }
     @media (max-width: 767px) {
       .doctor-photo--container div {
         width: 100%; } }
     .doctor-photo--container div p {
-      line-height: 2.5; }
+      line-height: 2; }
+
+.doctor-photo--container-desc p {
+  font-size: 20px;
+  color: rgba(7, 3, 3, 0.404); }
+  .doctor-photo--container-desc p span {
+    display: block; }
+    @media (max-width: 767px) {
+      .doctor-photo--container-desc p span {
+        display: inline; } }

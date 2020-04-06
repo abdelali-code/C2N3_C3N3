@@ -16,13 +16,14 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm-run-all --parallel watch:sass start:server",
+    "start": "npm-run-all --parallel watch:sass watch:js",
     "watch:sass": "gulp watch:sass",
     "start:server": "gulp startServer",
     "build:css": "gulp sass --gulpfile gulpbuild.js",
     "build:js": "gulp compileJs --gulpfile gulpbuild.js",
     "copy": "gulp copy --gulpfile gulpbuild.js",
-    "build": "npm-run-all --parallel copy build:js build:css"
+    "build": "npm-run-all --parallel copy build:js build:css",
+    "watch:js": "gulp watch:js"
   },
   "repository": {
     "type": "git",
@@ -38,6 +39,7 @@
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "autoprefixer": "^9.7.5",
+    "babel-loader": "^8.1.0",
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
@@ -46,6 +48,9 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
     "node-sass": "^4.13.1",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-stream": "^5.2.1"
   }
 }
