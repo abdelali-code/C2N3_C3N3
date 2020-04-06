@@ -8,7 +8,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/main.css" />
-    <title>test corona virus ....</title>
+    <title>corona virus ....</title>
   </head>
   <body>
     <!-- navigation -->
@@ -18,7 +18,7 @@
       /></a>
       <ul class="navbar--items">
         <li><a href="conseil.html">Conseil</a></li>
-        <li><a href="index.html">Acceuil</a></li>
+        <li><a href="index.html" class="active">Acceuil</a></li>
         <li class="navbar--items--btn">
           <a href="#"
             ><span>عربي</span
@@ -28,37 +28,71 @@
       </ul>
     </nav>
     <main>
-      <section>
-      <div class="container">
-        <div class="progress-bar">
-          <span class="big-circle add_main_color"><i class="circle add_warning_color"></i></span>
-          <div class="line"><span class="big-circle second-circle-container"><i class="circle second-circle"></i></span></div>
-          <span class="big-circle"><i class="circle"></i></span>
+      <!-- warning  and hero section-->
+      <section class="hero">
+        <div class="hero--warning">
+          <h3 class="hero--warning--title">LA DERNIÈRE INFO MÉDICALE</h3>
+          <p class="hero--warning-description">
+            La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait
+            être un facteur d'aggravation de l’infection. En cas de fièvre,
+            prenez du paracétamol. N'arrêtez pas votre traitement ! Consultez
+            votre médecin ou votre pharmacien
+          </p>
         </div>
-        <div class="progress-bar-description">
-          <p class="progress-bar-description--first">Informations</p>
-          <p class="progress-bar-description--second">Questionnaire</p>
-          <p class="progress-bar-description--third">Résultats</p>
+      </section>
+      <!-- comment protger section -->
+         <!-- doctor section -->
+         <section class="doctor-photo">
+           <div class="container doctor-photo--container">
+            <div class="doctor-photo--container-img">
+              <img src="./images/doctor.svg" alt="" width="100%">
+            </div>
+            <div class="doctor-photo--container-desc">
+              <h3 class="title"> Vous pensez avoir été exposé au Coronavirus COVID-19 et avez des symptômes ?</h3>
+              <img src="./images/1f637.svg" alt="" />
+              <p><span> reste vigilant ?</span> <span> programme une téléconsultation ?</span> <span>J'appelle le 15 ?</span> <span> le test pour répondre en citoyen</span> <span>éclairé selon vos symptômes.</span></p>
+              <a href="#" class="demarer-test">Demarer le test</a>
+            </div>
         </div>
-      </div>
-      <!-- <div class="container progress-indicateur">
-        <progress id="progress" max="23" value="1"></progress><span id="show-progress">1/23</span>
-      </div> -->
-      <!-- Préambule -->
-      <div class="container" id="description">
-        <div class="preambule">
-          <h3 class="title">Préambule</h3>
-          <p>« L’application est fournie à titre gratuit, en l’état, uniquement à des fins d’information pour contribuer à fluidifier la prise en charge des personnes par les services d’urgences pendant l’épidémie de Coronavirus COVID-19. L’exhaustivité, l’exactitude, le caractère à jour des informations et contenus mis à disposition dans cette application, ou leur adéquation à des finalités particulières, ne sont pas garantis.</p>
-          <hr>
-          <p> L’utilisation de l’application et de son contenu ne remplace en aucun cas le conseil nécessaire donné par votre médecin ou votre pharmacien ou tout autre professionnel de santé compétent dans chaque cas particulier. Tout examen ou décision de l’utilisateur doit être réalisé ou prise de manière autonome sur la base de l’information scientifique et clinique pertinente, de la notice officielle du produit concerné le cas échéant et en cas de doute, en consultant un médecin compétent. </p>
+        </section>
+        <!-- end of doctor section -->
+      <!-- symptomes -->
+      <section class="symptomes">
+        <h3 class="title">Quels sont les symptômes à surveiller ?</h3>
+        <div class="symptomes--types">
+          <figure class="figure">
+            <div class="img_container">
+              <img src="./images/mesure.svg" alt="" height="100%"/>
+            </div>
+            <figcaption class="caption">
+              Fièvre
+            </figcaption>
+          </figure>
+          <figure class="figure">
+            <div class="img_container">
+              <img src="./images/Calque 2.svg" alt="" />
+            </div>
+            <figcaption class="caption">
+              Nausées <br />et vomissements
+            </figcaption>
+          </figure>
+          <figure class="figure">
+            <div class="img_container">
+              <img src="./images/Calque -2.svg" alt="" />
+            </div>
+            <figcaption class="caption">Gêne <br />respiratoire</figcaption>
+          </figure>
+          <figure class="figure">
+            <div class="img_container">
+              <img src="./images/Calque -9.svg" alt="" />
+            </div>
+            <figcaption class="caption">Toux et maux <br />de gorge</figcaption>
+          </figure>
         </div>
-        <a href="#" class="demarer-test" id="start-survey" onclick="clearApp()">Demarer le test</a>
-      </div>
-      
-      <!-- end Préambule -->
-    </section>
+      </section>
+      <!-- end of symptomes -->
       <!-- recommandations -->
-      <section class="recommandations" id="recommandations">
+      <section class="recommandations">
         <h3 class="title">Recommandations officielles</h3>
         <div class="container recommandations-desc">
           <div class="recommandations--list">
@@ -88,9 +122,17 @@
           </div>
         </div>
       </section>
-      <div id="root"></div>
       <!-- end of recommandations -->
-      
+      <!-- demander test -->
+      <section class="demande-test">
+        <h3 class="title">
+          Vous pensez avoir été exposé au Coronavirus COVID-19 et avez des
+          symptômes ?
+        </h3>
+        <img src="./images/1f637.svg" alt="" />
+        <a href="#" class="demarer-test">Demarer le test</a>
+      </section>
+      <!-- end demande test -->
     </main>
     <footer>
       <div class="container">
@@ -130,6 +172,5 @@
     <div class="footer--foot">
     </div>
     </footer>
-    <script src="./dev/bundle.js"></script>
   </body>
 </html>
