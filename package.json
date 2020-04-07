@@ -23,7 +23,8 @@
     "build:js": "gulp compileJs --gulpfile gulpbuild.js",
     "copy": "gulp copy --gulpfile gulpbuild.js",
     "build": "npm-run-all --parallel copy build:js build:css",
-    "watch:js": "gulp watch:js"
+    "watch:js": "gulp watch:js",
+    "watch": "npm-run-all --parallel watch:js watch:sass"
   },
   "repository": {
     "type": "git",
