@@ -37,7 +37,7 @@ function bundle() {
   return gulp
     .src("src/scripts/main.js")
     .pipe(webpack(require("./webpack.config"), compiler))
-    .pipe(gulp.dest("build/scripts"));
+    .pipe(gulp.dest("build/dev"));
 }
 
 // function watchJs() {

@@ -1,0 +1,32 @@
+// doctor section
+.doctor {
+  padding: 20px 0px;
+  .doctor__container {
+    @extend %flex;
+    @media (max-width: 770px) {
+      flex-direction: column;
+    }
+    .doctor--container-img {
+      width: 50%;
+      @media (max-width: 770px) {
+        width: 100%;
+      }
+    }
+
+    .doctor--container-desc {
+      width: 50%;
+      text-align: center;
+      @media (max-width: 770px) {
+        width: 100%;
+      }
+
+      span {
+        display: block;
+        line-height: 1.9;
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.52);
+      }
+    }
+  }
+}
+// end of doctor section

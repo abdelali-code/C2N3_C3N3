@@ -3,30 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/normalize.css" />
     <link
-      <link
       href="https://fonts.googleapis.com/css2?family=Cairo&family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/main.css" />
-    
-    <title>corona virus ....</title>
+    <title>conseil . . . </title>
   </head>
   <body>
     <!-- navigation -->
     <nav class="navbar">
-      <a href="index.html" class="c"
+      <a href="index.html"
         ><img src="./images/logo__sante-1.svg" alt="ministre de santé"
       /></a>
-      <ul class="navbar--items">
-        <li><a href="conseil.html" class="active">Conseil</a></li>
-        <li><a href="index.html">Acceuil</a></li>
-        <li class="navbar--items--btn">
-          <a href="#"
+      <ul class="navbar__list">
+        <li class="navbar__item"><a href="conseil.html" class="navbar__link">Conseil</a></li>
+        <li class="navbar__item"><a href="index.html" class="navbar__link active">Acceuil</a></li>
+        <li class="navbar__item navbar__item--border">
+          <a href="#" class="navbar__link navbar__link--lang"
             ><span>عربي</span
-            ><img src="./images/www.svg" alt="" class="navbar--items--btn-img"
+            ><img src="./images/www.svg" alt=""
           /></a>
         </li>
       </ul>
@@ -34,9 +31,9 @@
     <main>
       <!-- warning  and hero section-->
       <section class="hero">
-        <div class="hero--warning">
-          <h3 class="hero--warning--title">LA DERNIÈRE INFO MÉDICALE</h3>
-          <p class="hero--warning-description">
+        <div class="hero__warning container">
+          <h3 class="hero__title">LA DERNIÈRE INFO MÉDICALE</h3>
+          <p class="hero__descri">
             La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait
             être un facteur d'aggravation de l’infection. En cas de fièvre,
             prenez du paracétamol. N'arrêtez pas votre traitement ! Consultez
@@ -45,13 +42,14 @@
         </div>
       </section>
       <!-- comment protger section -->
-      <section class="proteger">
-        <h3 class="fixed_width">
+       <!-- comment protger section -->
+       <section class="proteger">
+        <h3 class="title">
           Comment se protéger et protéger les autres au quotidien ?
         </h3>
-        <div class="container proteger-items">
+        <div class="container proteger__items">
           <figure class="figure">
-            <div class="img_container">
+            <div class="figure-img__container">
               <img src="./images/Calque -5.svg" alt="" />
             </div>
             <figcaption class="caption">
@@ -59,7 +57,7 @@
             </figcaption>
           </figure>
           <figure class="figure">
-            <div class="img_container">
+            <div class="figure-img__container">
               <img src="./images/Calque -19.svg" alt="" />
             </div>
             <figcaption class="caption">
@@ -68,7 +66,7 @@
             </figcaption>
           </figure>
           <figure class="figure">
-            <div class="img_container">
+            <div class="figure-img__container">
               <img src="./images/Calque -3.svg" alt="" />
             </div>
             <figcaption class="caption">
@@ -77,7 +75,7 @@
             </figcaption>
           </figure>
           <figure class="figure">
-            <div class="img_container">
+            <div class="figure-img__container">
               <img src="./images/cough-svgrepo-com.svg" alt="" />
             </div>
             <figcaption class="caption">
@@ -86,7 +84,7 @@
             </figcaption>
           </figure>
           <figure class="figure">
-            <div class="img_container">
+            <div class="figure-img__container">
               <img src="./images/Fichier -3.svg" alt="" />
             </div>
             <figcaption class="caption">
@@ -95,7 +93,7 @@
             </figcaption>
           </figure>
           <figure class="figure">
-            <div class="img_container">
+            <div class="figure-img__container">
               <img src="./images/Calque -17.svg" alt="" />
             </div>
             <figcaption class="caption">
@@ -103,7 +101,7 @@
             </figcaption>
           </figure>
           <figure class="figure">
-            <div class="img_container">
+            <div class="figure-img__container">
               <img src="./images/icon-house.svg" alt="" />
             </div>
             <figcaption class="caption">
@@ -117,89 +115,93 @@
 
       <!-- informations -->
       <section class="information">
-        <div class="container information-types">
-          <div class="information--info figure">
-            <h3 class="fixed_width">information</h3>
+        <div class="container information__types">
+          <div class="information__info figure">
+            <h3 class="title">information</h3>
             <p>
               Obtenez des informations à jour<br />
               en provenance de Gouvernement.fr
             </p>
           </div>
           <div class="figure">
-            <a href="http://www.covidmaroc.ma">http://www.covidmaroc.ma</a>
+            <a href="http://www.covidmaroc.ma" class="btn btn-main">http://www.covidmaroc.ma</a>
           </div>
           <div class="figure">
-            <a href="#">Ce qu’il faut savoir </a>
+            <a href="#" class="btn btn-main">Ce qu’il faut savoir </a>
           </div>
         </div>
       </section>
       <!-- end information -->
+
       <!-- symptomes -->
       <section class="symptomes">
         <h3 class="title">Quels sont les symptômes à surveiller ?</h3>
-        <div class="symptomes--types">
+        <div class="symptomes__types">
           <figure class="figure">
-            <div class="img_container">
-              <img src="./images/mesure.svg" alt="" height="100%"/>
+            <div class="figure-img__container">
+              <img src="./images/mesure.svg" alt="" height="80%"/>
             </div>
             <figcaption class="caption">
               Fièvre
             </figcaption>
           </figure>
           <figure class="figure">
-            <div class="img_container">
+            <div class="figure-img__container">
               <img src="./images/Calque 2.svg" alt="" />
             </div>
             <figcaption class="caption">
               Nausées <br />et vomissements
             </figcaption>
           </figure>
+        </div>
+        <div class="symptomes__types">
           <figure class="figure">
-            <div class="img_container">
+            <div class="figure-img__container">
               <img src="./images/Calque -2.svg" alt="" />
             </div>
             <figcaption class="caption">Gêne <br />respiratoire</figcaption>
           </figure>
           <figure class="figure">
-            <div class="img_container">
+            <div class="figure-img__container">
               <img src="./images/Calque -9.svg" alt="" />
             </div>
             <figcaption class="caption">Toux et maux <br />de gorge</figcaption>
           </figure>
         </div>
-        <!-- transmition -->
-        <div class="symptomes--transmition">
-          <h3 class="title">Le Coronavirus COVID-19 se transmet</h3>
-          <div class="symptomes--transmition-items">
-            <figure class="figure">
-              <div class="img_container">
-                <img src="./images/tra.svg" alt="" />
-              </div>
-              <figcaption class="caption">
-                Par la projection de gouttelettes<br />
-                en postillonnant
-              </figcaption>
-            </figure>
-            <figure class="figure">
-              <div class="img_container">
-                <img src="./images/Calque -6.svg" alt="" />
-              </div>
-              <figcaption class="caption">
-                Face à face pendant au <br />moins 15 min
-              </figcaption>
-            </figure>
-          </div>
         </div>
-        <!-- end transmition -->
       </section>
+
+      <section class="container symptomes-transmition">
+        <h3 class="title">Le Coronavirus COVID-19 se transmet</h3>
+        <div class="symptomes-transmition__items">
+          <figure class="figure">
+            <div class="figure-img__container">
+              <img src="./images/tra.svg" alt="" />
+            </div>
+            <figcaption class="caption">
+              Par la projection de gouttelettes<br />
+              en postillonnant
+            </figcaption>
+          </figure>
+          <figure class="figure">
+            <div class="figure-img__container">
+              <img src="./images/Calque -6.svg" alt="" />
+            </div>
+            <figcaption class="caption">
+              Face à face pendant au <br />moins 15 min
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <!-- end transmition -->
       <!-- end of symptomes -->
       <!-- recommandations -->
       <section class="recommandations">
-        <h3 class="title">Recommandations officielles</h3>
-        <div class="container recommandations-desc">
-          <div class="recommandations--list">
-            <h4>Si vous pensez être malade,</h4>
-            <ul>
+        <h3 class="title recommandations__title">Recommandations officielles</h3>
+        <div class="container recommandations__desc">
+          <div class="recommandations__list">
+            <h4 class="recommandations__list--title">Si vous pensez être malade,</h4>
+            <ul class="recommandations__items">
               <li>évitez les endroits publics.</li>
               <li>Ne rendez pas visite aux personnes fragiles.</li>
               <li>Évitez de sortir de chez vous.</li>
@@ -210,15 +212,15 @@
               <li>corporelle et recherchez un avis médical.</li>
             </ul>
           </div>
-          <div class="recommandations--contact">
-            <h3>Appel Gratuit</h3>
-            <a href="tel:+2120801004747" class="recommandations--contact-phone"
+          <div class="recommandations__contact">
+            <h3 class="recommandations__contact--title">Appel Gratuit</h3>
+            <a href="tel:+2120801004747" class="recommandations__contact--phone"
               >080 100 47 47</a
             >
             <a
               href="www.sante.gov.ma"
               target="_blank"
-              class="recommandations--contact-site"
+              class="recommandations__contact--site"
               >www.sante.gov.ma</a
             >
           </div>
@@ -231,8 +233,8 @@
           Vous pensez avoir été exposé au Coronavirus COVID-19 et avez des
           symptômes ?
         </h3>
-        <img src="./images/1f637.svg" alt="" />
-        <a href="quiz.html" class="demarer-test go_to_quiz">Demarer le test</a>
+        <img src="./images/1f637.svg" alt="" class="demande-test__icon"/><br>
+        <a href="quiz.html" class="btn btn-main">Demarer le test</a>
       </section>
       <!-- end demande test -->
     </main>
@@ -242,15 +244,14 @@
       <div class="footer--content">
         <div class="nav">
           <ul>
-            <li class="navbar--items--btn">
-              <a href="#"
+            <li>
+              <a href="#" class="navbar__link--lang"
                 ><span>عربي</span
                 ><img
                   src="./images/www.svg"
                   alt=""
-                  class="navbar--items--btn-img"
               /></a>
-              <li><a href="#" class="active">Acceuil</a></li>
+              <li><a href="#">Acceuil</a></li>
             <li><a href="conseil.html">Conseil</a></li>
             </li>
           </ul>

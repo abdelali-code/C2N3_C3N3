@@ -1,0 +1,42 @@
+.navbar {
+  height: 88px;
+  background-image: url("../images/Merged\ bar-1.svg");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: space-between;
+  background-color: $main_color;
+  font-family: $secondary_font;
+  padding: 10px 15px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  .navbar__list {
+    margin-top: 22px;
+    margin-right: 24px;
+    .navbar__item {
+      display: inline-block;
+      margin-left: 64px;
+      @media (max-width: 767px) {
+        margin-left: 20px;
+      }
+      .navbar__link {
+        color: $black_color;
+      }
+      .navbar__link--lang {
+        span {
+          position: relative;
+          bottom: 4px;
+          right: 5px;
+          color: $secondary_color;
+        }
+      }
+    }
+  }
+  .navbar__item--border {
+    border: 1px solid $secondary_color;
+    padding: 6px 7px 5px 10px;
+    @extend %radius;
+  }
+}

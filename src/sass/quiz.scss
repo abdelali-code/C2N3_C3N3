@@ -1,0 +1,126 @@
+@import "./variables";
+@import "./general";
+@import "./common";
+@import "./helper";
+@import "./header";
+@import "./footer";
+
+.progress-bar {
+  width: 350px;
+  margin: 24px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  span {
+    @extend %big_circle;
+  }
+  .second-circle-container {
+    display: inline-block;
+    position: relative;
+    left: 138px;
+    bottom: 11px;
+  }
+  .line {
+    width: 300px;
+    height: 3px;
+    background-color: $green_color;
+  }
+
+  i {
+    display: inline-block;
+    height: 8px;
+    width: 9px;
+    background-color: $secondary_color;
+    border-radius: 50%;
+    margin-bottom: 3px;
+    @media (max-width: 676px) {
+      margin-bottom: 1px;
+    }
+  }
+}
+
+.progress-bar-description {
+  max-width: 370px;
+  margin: 0px auto;
+  font-size: 12px;
+  p {
+    display: inline-block;
+    position: relative;
+    bottom: 15px;
+  }
+  .progress-bar-description--second {
+    margin-left: 60px;
+  }
+  .progress-bar-description--third {
+    margin-left: 80px;
+    @media (max-width: 380px) {
+      margin-left: 50px;
+    }
+  }
+}
+
+.add_main_color {
+  background-color: $main_color;
+}
+
+.add_warning_color {
+  background-color: $warning_color !important;
+}
+
+%big_circle {
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+// preambule
+// .preambule__container {
+//   margin: 0px auto;
+// }
+.preambule {
+  background-color: $main_color;
+  margin: 24px auto;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Cairo", sans-serif;
+  p {
+    padding: 24px;
+    line-height: 2;
+  }
+}
+
+// preambule
+
+// end preambule
+// show show-progress
+#progre {
+  display: flex;
+  // justify-content: start;
+  align-items: center;
+}
+.show-progress {
+  // border: 0.5px solid grey;
+  border-radius: 20px;
+  height: 12px;
+  margin: 32px auto;
+  width: 90%;
+  background-color: lightblue;
+  .progress-indicateur {
+    width: 4.55%;
+    border-radius: 20px;
+    // text-align: start;
+    background-color: $secondary_color;
+    height: 12px;
+  }
+}
+
+//end show progress
+.start-btn__container {
+  a {
+    width: 50%;
+    margin-left: 24%;
+  }
+}

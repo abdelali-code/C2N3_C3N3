@@ -3,112 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link
+    <link
       href="https://fonts.googleapis.com/css2?family=Cairo&family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/normalize.css">
-    <link rel="stylesheet" href="./styles/main.css" />
-    <title>test corona virus ....</title>
+    <link rel="stylesheet" href="./styles/quiz.css" />
+    <title>corona virus Test ....</title>
   </head>
   <body>
+    <main>
     <!-- navigation -->
     <nav class="navbar">
-      <a href="index.html" class="c"
+      <a href="index.html"
         ><img src="./images/logo__sante-1.svg" alt="ministre de santé"
       /></a>
-      <ul class="navbar--items">
-        <li><a href="conseil.html">Conseil</a></li>
-        <li><a href="index.html">Acceuil</a></li>
-        <li class="navbar--items--btn">
-          <a href="#"
+      <ul class="navbar__list">
+        <li class="navbar__item"><a href="conseil.html" class="navbar__link">Conseil</a></li>
+        <li class="navbar__item"><a href="index.html" class="navbar__link">Acceuil</a></li>
+        <li class="navbar__item navbar__item--border">
+          <a href="#" class="navbar__link navbar__link--lang"
             ><span>عربي</span
-            ><img src="./images/www.svg" alt="" class="navbar--items--btn-img"
+            ><img src="./images/www.svg" alt=""
           /></a>
         </li>
       </ul>
     </nav>
-    <main id="quiz">
-      <!-- <section id="root">
+    <div  id="root">
       <div class="container">
-        <div class="progress-bar">
-          <span class="big-circle add_main_color"><i class="circle add_warning_color"></i></span>
-          <div class="line"><span class="big-circle second-circle-container"><i class="circle second-circle"></i></span></div>
-          <span class="big-circle"><i class="circle"></i></span>
-        </div>
-        <div class="progress-bar-description">
-          <p class="progress-bar-description--first">Informations</p>
-          <p class="progress-bar-description--second">Questionnaire</p>
-          <p class="progress-bar-description--third">Résultats</p>
-        </div>
-      </div> -->
-      <!-- <div class="container progress-indicateur">
-        <progress id="progress" max="23" value="1"></progress><span id="show-progress">1/23</span>
-      </div> -->
-      <!-- Préambule -->
-      <!-- <div class="container" id="description">
-        <div class="preambule">
-          <h3 class="title">Préambule</h3>
-          <p>« L’application est fournie à titre gratuit, en l’état, uniquement à des fins d’information pour contribuer à fluidifier la prise en charge des personnes par les services d’urgences pendant l’épidémie de Coronavirus COVID-19. L’exhaustivité, l’exactitude, le caractère à jour des informations et contenus mis à disposition dans cette application, ou leur adéquation à des finalités particulières, ne sont pas garantis.</p>
-          <hr>
-          <p> L’utilisation de l’application et de son contenu ne remplace en aucun cas le conseil nécessaire donné par votre médecin ou votre pharmacien ou tout autre professionnel de santé compétent dans chaque cas particulier. Tout examen ou décision de l’utilisateur doit être réalisé ou prise de manière autonome sur la base de l’information scientifique et clinique pertinente, de la notice officielle du produit concerné le cas échéant et en cas de doute, en consultant un médecin compétent. </p>
-        </div>
-        <a href="#" class="demarer-test" id="start_survey" >Demarer le test</a>
-      </div> -->
-      
-      <!-- end Préambule -->
-    <!-- </section> -->
-      <!-- recommandations -->
-      <!-- <section class="recommandations" id="recommandations">
-        <h3 class="title">Recommandations officielles</h3>
-        <div class="container recommandations-desc">
-          <div class="recommandations--list">
-            <h4>Si vous pensez être malade,</h4>
-            <ul>
-              <li>évitez les endroits publics.</li>
-              <li>Ne rendez pas visite aux personnes fragiles.</li>
-              <li>Évitez de sortir de chez vous.</li>
-              <li>Respectez les mesures barrière (lavage de main, masque).</li>
-              <li>
-                Surveillez vos symptômes, l’évolution de votre température
-              </li>
-              <li>corporelle et recherchez un avis médical.</li>
-            </ul>
-          </div>
-          <div class="recommandations--contact">
-            <h3>Appel Gratuit</h3>
-            <a href="tel:+2120801004747" class="recommandations--contact-phone"
-              >080 100 47 47</a
-            >
-            <a
-              href="www.sante.gov.ma"
-              target="_blank"
-              class="recommandations--contact-site"
-              >www.sante.gov.ma</a
-            >
-          </div>
-        </div>
-      </section>
-      <section id="quiz">
+        <p>your browser doesn't support javascript</p>
+        <a href="https://support.google.com/adsense/answer/12654?hl=fr">try to activate it</a>
+      </div>
+    </div>
 
-      </section> -->
-      <!-- end of recommandations -->
-    </main>
+   
     <footer>
       <div class="container">
       <img src="./images/logo__sante-1.svg" alt="ministre de santé" />
       <div class="footer--content">
         <div class="nav">
           <ul>
-            <li class="navbar--items--btn">
-              <a href="#"
+            <li>
+              <a href="#" class="navbar__link--lang"
                 ><span>عربي</span
                 ><img
                   src="./images/www.svg"
                   alt=""
-                  class="navbar--items--btn-img"
               /></a>
-              <li><a href="#" class="active">Acceuil</a></li>
+              <li><a href="#">Acceuil</a></li>
             <li><a href="conseil.html">Conseil</a></li>
             </li>
           </ul>
@@ -132,6 +74,89 @@
     <div class="footer--foot">
     </div>
     </footer>
+  </main>
     <script src="./dev/bundle.js"></script>
   </body>
 </html>
+
+
+
+
+              <!-- Préambule -->
+              <!-- <div class="container preambule__container" id="preambule">
+                <div class="preambule">
+                  <h3 class="title">Préambule</h3>
+                  <p>« L’application est fournie à titre gratuit, en l’état, uniquement à des fins d’information pour contribuer à fluidifier la prise en charge des personnes par les services d’urgences pendant l’épidémie de Coronavirus COVID-19. L’exhaustivité, l’exactitude, le caractère à jour des informations et contenus mis à disposition dans cette application, ou leur adéquation à des finalités particulières, ne sont pas garantis.</p>
+                  <hr>
+                  <p> L’utilisation de l’application et de son contenu ne remplace en aucun cas le conseil nécessaire donné par votre médecin ou votre pharmacien ou tout autre professionnel de santé compétent dans chaque cas particulier. Tout examen ou décision de l’utilisateur doit être réalisé ou prise de manière autonome sur la base de l’information scientifique et clinique pertinente, de la notice officielle du produit concerné le cas échéant et en cas de doute, en consultant un médecin compétent. </p>
+                </div>
+                <div>
+                    <a href="#" class="btn btn-main btn-midd" id="start_survey" >Demarer le test</a>
+                </div>
+              </div>  -->
+              
+              <!-- end Préambule -->
+
+
+
+
+
+
+ <!-- stepper -->
+ <!-- <div class="container" id="stepper">
+  <div class="progress-bar">
+    <span class="big-circle add_main_color" id="sp1"><i class="circle add_warning_color" id="c1"></i></span>
+    <div class="line"><span class="big-circle second-circle-container" id="sp2"><i class="circle second-circle" id="c2"></i></span></div>
+    <span class="big-circle" id="sp3"><i class="circle" id="c3"></i></span>
+  </div>
+  <div class="progress-bar-description">
+    <p class="progress-bar-description--first">Informations</p>
+    <p class="progress-bar-description--second">Questionnaire</p>
+    <p class="progress-bar-description--third">Résultats</p>
+  </div>
+</div> -->
+<!-- end stepper -->
+
+
+
+
+
+
+
+
+<!-- <div class="container" id="quiz"> 
+  <div class="quiz_elems">
+    <p class="question">
+      Pensez-vous avoir ou avoir eu de la fièvre ces 10 derniers jours (frissons, sueurs) ?
+    </p>
+    <form class="quiz__form">
+      <div class="form_control">
+        <input type="radio" name="question1" value="oui" >
+        <label for="oui">Oui</label>
+      </div>
+      <div class="form_control">
+        <input type="radio" name="question1" value="non" checked>
+        <label for="non">Non</label>
+      </div>
+    </form>
+  </div>
+</div> -->
+
+<!-- 
+<div class="container" id="quiz"> 
+  <div class="quiz_elems">
+    <p class="question">
+      Pensez-vous avoir ou avoir eu de la fièvre ces 10 derniers jours (frissons, sueurs) ?
+    </p>
+    <form class="quiz__form">
+      <div class="form_control">
+        <input type="radio" name="question1" value="oui" >
+        <label for="oui">Oui</label>
+      </div>
+      <div class="form_control">
+        <input type="radio" name="question1" value="non" checked>
+        <label for="non">Non</label>
+      </div>
+    </form>
+  </div>
+</div> -->

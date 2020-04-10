@@ -1,7 +1,9 @@
-@import "./variable";
-// @import "./normalize";
+@import "./variables";
+@import "./general";
 @import "./common";
-@import "./error";
-@import "./quiz";
+@import "./helper";
+@import "./header";
+@import "./footer";
 @import "./conseil";
-@import "./home";
+@import "./quiz";
+@import "./acceuil";

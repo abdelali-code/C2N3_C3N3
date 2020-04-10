@@ -1,0 +1,14 @@
+.active {
+  color: $secondary_color !important;
+}
+
+%radius {
+  border-radius: 10px;
+}
+
+.container {
+  max-width: 1370px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}

@@ -1,13 +1,25 @@
-import { stepper } from "./component/showBar";
-import { preambule } from "./component/preambule";
+"use strict";
+
+import {
+  removePreambule,
+  updateStepperStyle,
+} from "./component/removeInitailElem";
+
+// import "../sass/_quiz.scss";
+// import "../sass/normalize.scss";
+
+import { addProgressIndi } from "./component/addProgress";
+import { updateProgress } from "./component/updateProgress";
+import { addStepper } from "./component/stepper";
 import { addToparent } from "./helpers/createElement";
-import { recommandations } from "./component/recommandations";
+import { startBtn, addPreambule } from "./component/peambule";
 
-const main = document.getElementById("quiz");
+const main = document.getElementById("root");
 
-// add stepper;
-const showBar = stepper();
-const prem = preambule();
-const recomm = recommandations();
-
-addToparent(main, [showBar, prem, recomm]);
+window.addEventListener("load", () => {
+  main.innerHTML = "";
+  const stepper = addStepper();
+  const start = startBtn();
+  const preambule = addPreambule();
+  addToparent(main, [stepper, preambule, start]);
+});
