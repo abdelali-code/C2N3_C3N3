@@ -6,9 +6,17 @@ const uglify = require("gulp-uglify");
 const postcss = require("gulp-postcss");
 const compiler = require("webpack");
 const webpack = require("webpack-stream");
+const imagemin = require("gulp-imagemin");
 
-function copy() {
-  return gulp.src(["src/*.html", "src/**/*.svg"]).pipe(gulp.dest("build"));
+function copyImg() {
+  return gulp
+    .src("src/images/*.+(png|jpg|gif|svg)")
+    .pipe(imagemin())
+    .pipe(gulp.dest("build/images"));
+}
+
+function copyHtml() {
+  return gulp.src("src/*.html").pipe(gulp.dest("src/"));
 }
 
 sass.compiler = require("node-sass");
@@ -48,5 +56,5 @@ function bundle() {
 //   return gulp.watch("src/scripts/**/*.js", bundle);
 // }
 // gulp.task("compileJs", compileJs);
-gulp.task("copy", copy);
+gulp.task("copy", gulp.series([copyImg, copyHtml]));
 gulp.task("compileJs", bundle);

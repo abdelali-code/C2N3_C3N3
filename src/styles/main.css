@@ -270,7 +270,9 @@ footer {
 
 .symptomes-transmition__items {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  max-width: 850px;
+  margin: 0 auto;
   text-align: center;
   color: #1078ad; }
 
