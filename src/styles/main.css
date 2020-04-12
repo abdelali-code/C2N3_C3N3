@@ -54,7 +54,10 @@ main {
   text-align: center;
   border-radius: 10px;
   width: 80%;
-  font-size: 20px; }
+  outline: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer; }
 
 .small-btn {
   width: auto; }
@@ -332,7 +335,10 @@ main {
   text-align: center;
   border-radius: 10px;
   width: 80%;
-  font-size: 20px; }
+  outline: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer; }
 
 .small-btn {
   width: auto; }
@@ -535,7 +541,7 @@ footer {
     background-color: #369d53; }
   .progress-bar i {
     display: inline-block;
-    height: 8px;
+    height: 9px;
     width: 9px;
     background-color: #1078ad;
     border-radius: 50%;
@@ -595,13 +601,31 @@ footer {
   background-color: lightblue; }
   .show-progress .progress-indicateur {
     width: 4.55%;
-    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     background-color: #1078ad;
     height: 12px; }
 
 .start-btn__container a {
   width: 50%;
   margin-left: 24%; }
+
+.btnCont {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px auto;
+  max-width: 500px; }
+  @media (max-width: 500px) {
+    .btnCont button {
+      font-size: 16px; } }
+
+.quiz_elem {
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.472);
+  max-width: 500px; }
+
+.question {
+  min-height: 150px; }
 
 .doctor {
   padding: 20px 0px; }

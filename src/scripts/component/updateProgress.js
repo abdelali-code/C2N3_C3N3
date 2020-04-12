@@ -1,10 +1,9 @@
-function updateProgress(n) {
-  let initialWidth = 4.55;
+function updateProgress(num) {
+  const progressInd = document.getElementById("currentIndice");
   const indice = document.getElementById("indice");
-  const currentIndice = document.getElementById("currentIndice");
-  currentIndice.style.width = n * initialWidth + "%";
-  let addVal = Number(indice.textContent);
-  indice.textContent = "10";
+
+  progressInd.style.width = (num + 1) * 4.55 + "%";
+  indice.innerText = num + 1;
 }
 
 export { updateProgress };

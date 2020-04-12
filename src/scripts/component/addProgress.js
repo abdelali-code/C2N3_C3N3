@@ -10,6 +10,7 @@ function addProgressIndi() {
     class: ["progress-indicateur"],
     id: "currentIndice",
   });
+  // progress_indicateur.style.width = 4.55 + "%";
   const sp = createElement("span", { id: "indice" });
   sp.textContent = "1";
   const sp2 = createElement("span", {});

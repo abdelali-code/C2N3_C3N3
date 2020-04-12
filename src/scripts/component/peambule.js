@@ -21,7 +21,7 @@ function startBtn() {
     class: ["start-btn__container", "container"],
   });
   container.innerHTML = `
-        <a href="#" class="btn btn-main" id="start_survey" >Demarer le test</a>
+        <a class="btn btn-main" id="start_survey" >Demarer le test</a>
         `;
   return container;
 }
