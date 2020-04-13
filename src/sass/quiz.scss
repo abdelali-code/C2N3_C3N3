@@ -144,11 +144,67 @@
 // end buttons quiz
 
 // quiz question
-.quiz_elem {
-  font-size: 22px;
-  color: rgba(0, 0, 0, 0.472);
-  max-width: 500px;
-}
+
 .question {
   min-height: 150px;
+  // background-color: cadetblue;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.quiz_elem {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.472);
+  max-width: 700px;
+  min-height: 45vh;
+}
+
+.form {
+  padding: 48px 15px;
+  min-height: 150px;
+  // background-color: black;
+  // color: #fff;
+}
+
+// for forth choices radio
+form.flex-radio {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+}
+
+// for form of two choices
+.form-checkbox {
+  width: 160px;
+  text-align: end;
+  margin-bottom: 20px;
+  input {
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    position: relative;
+    top: 3px;
+  }
+}
+
+// form input number
+.form-control {
+  width: 320px;
+  text-align: center;
+  margin: 48px auto 0px auto;
+  input {
+    width: 250;
+    border: 2px solid $secondary_color;
+    outline: none;
+    padding: 5px;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+}
+
+// for submit btn
+.add-green-backgr {
+  background-color: $green_color;
 }

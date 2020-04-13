@@ -4,20 +4,19 @@
 // import "../sass/normalize.scss";
 
 import { addProgressIndi } from "./component/addProgress";
-import { updateProgress } from "./component/updateProgress";
 import { addStepper } from "./component/stepper";
 import { addToparent } from "./helpers/createElement";
 import { startBtn, addPreambule } from "./component/peambule";
-// import { addInfoMedi } from "./component/addInfo";
 import { addQuiz } from "./component/addQuiz";
 import { addRecommandations } from "./component/addRecommand";
 import { QUESTION } from "./helpers/question";
 import { updateStepper } from "./component/updateStepper";
 
-const root = document.getElementById("root");
-let counter = 0;
-
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
+  const root = document.getElementById("root");
+  let counter = 0;
+  // to store the answer of the question;
+  const result = Array(QUESTION.length).fill(null);
   root.innerHTML = "";
   const stepper = addStepper();
   const start = startBtn();
@@ -33,7 +32,7 @@ window.addEventListener("load", () => {
     root.removeChild(start);
     addToparent(root, [
       addProgressIndi(),
-      addQuiz(QUESTION, counter),
+      addQuiz(QUESTION, counter, result),
       addRecommandations(),
     ]);
   });

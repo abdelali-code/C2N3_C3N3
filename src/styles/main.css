@@ -619,13 +619,54 @@ footer {
     .btnCont button {
       font-size: 16px; } }
 
-.quiz_elem {
-  font-size: 22px;
-  color: rgba(0, 0, 0, 0.472);
-  max-width: 500px; }
-
 .question {
+  min-height: 150px;
+  text-align: center;
+  display: flex;
+  align-items: center; }
+
+.quiz_elem {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.472);
+  max-width: 700px;
+  min-height: 45vh; }
+
+.form {
+  padding: 48px 15px;
   min-height: 150px; }
+
+form.flex-radio {
+  display: flex;
+  justify-content: space-between; }
+  @media (max-width: 500px) {
+    form.flex-radio {
+      flex-direction: column; } }
+
+.form-checkbox {
+  width: 160px;
+  text-align: end;
+  margin-bottom: 20px; }
+  .form-checkbox input {
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    position: relative;
+    top: 3px; }
+
+.form-control {
+  width: 320px;
+  text-align: center;
+  margin: 48px auto 0px auto; }
+  .form-control input {
+    width: 250;
+    border: 2px solid #1078ad;
+    outline: none;
+    padding: 5px;
+    border-radius: 10px;
+    margin-right: 10px; }
+
+.add-green-backgr {
+  background-color: #369d53; }
 
 .doctor {
   padding: 20px 0px; }

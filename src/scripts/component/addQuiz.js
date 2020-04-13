@@ -1,8 +1,9 @@
 import { createElement, addToparent } from "../helpers/createElement";
 import { addInfoMedi } from "./addInfo";
 import { updateProgress } from "./updateProgress";
+import { collectAnswer } from "./collectAnswer";
 
-function addQuiz(QUESTION, counter) {
+function addQuiz(QUESTION, counter, result) {
   // let counter = 0; //keep track current question in question array
   const parent = createElement("div", {}); //cont for question and additionnel info
   const container = createElement("div", { class: ["container", "quiz_elem"] });
@@ -29,9 +30,20 @@ function addQuiz(QUESTION, counter) {
   //   when we click on btn suiv incre counter by 1 to change to next question
   nextBtn.addEventListener("click", () => {
     if (counter < QUESTION.length - 1) {
+      console.log("before", result);
+      collectAnswer(result, counter);
+      console.log("after", result);
       counter++;
       addSiQs(counter, QUESTION, para, form, warning_cont);
       updateProgress(counter);
+
+      if (counter === QUESTION.length - 1) {
+        nextBtn.innerText = "Submit";
+        nextBtn.classList.add("add-green-backgr");
+      }
+    } else if (counter === QUESTION.length - 1) {
+      // for submit btn
+      collectAnswer(result, counter);
     }
   });
 
@@ -41,6 +53,10 @@ function addQuiz(QUESTION, counter) {
       counter--;
       addSiQs(counter, QUESTION, para, form, warning_cont);
       updateProgress(counter);
+    }
+    if (nextBtn.innerText === "Submit" && QUESTION.length - 2) {
+      nextBtn.innerText = "Question suivant";
+      nextBtn.classList.remove("add-green-backgr");
     }
   });
 
@@ -67,13 +83,19 @@ function addSiQs(counter, QUESTION, para, form, warning_cont) {
 
   // display option for user to chose if exist choices;
   if (QUESTION[counter].choices.length > 0) {
+    // for add style for radio btn
+    if (QUESTION[counter].choices.length === 4) {
+      form.classList.add("flex-radio");
+    } else if (form.classList.contains("flex-radio")) {
+      form.classList.remove("flex-radio");
+    }
     form.innerHTML = "";
     for (let i = 0; i < QUESTION[counter].choices.length; i++) {
-      let form_control = createElement("div", { class: ["form-control"] });
+      let form_control = createElement("div", { class: ["form-checkbox"] });
       let step = createElement("input", {
         type: "radio",
         name: `question${counter}`,
-        id: `question${counter}`,
+        id: `question${i}`,
         value: QUESTION[counter].choices[i],
         checked: true,
       });
