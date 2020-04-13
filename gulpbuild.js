@@ -16,7 +16,7 @@ function copyImg() {
 }
 
 function copyHtml() {
-  return gulp.src("src/*.html").pipe(gulp.dest("src/"));
+  return gulp.src("src/*.html").pipe(gulp.dest("build/"));
 }
 
 sass.compiler = require("node-sass");

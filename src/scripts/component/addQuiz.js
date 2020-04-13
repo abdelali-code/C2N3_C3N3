@@ -4,7 +4,6 @@ import { updateProgress } from "./updateProgress";
 import { collectAnswer } from "./collectAnswer";
 
 function addQuiz(QUESTION, counter, result) {
-  // let counter = 0; //keep track current question in question array
   const parent = createElement("div", {}); //cont for question and additionnel info
   const container = createElement("div", { class: ["container", "quiz_elem"] });
   const btnCont = createElement("div", { class: ["container", "btnCont"] });
