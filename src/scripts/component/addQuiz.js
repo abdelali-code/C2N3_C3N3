@@ -2,6 +2,7 @@ import { createElement, addToparent } from "../helpers/createElement";
 import { addInfoMedi } from "./addInfo";
 import { updateProgress } from "./updateProgress";
 import { collectAnswer } from "./collectAnswer";
+import { checkAnswer } from "./checkAnswer";
 
 function addQuiz(QUESTION, counter, result) {
   const parent = createElement("div", {}); //cont for question and additionnel info
@@ -27,23 +28,24 @@ function addQuiz(QUESTION, counter, result) {
   addSiQs(counter, QUESTION, para, form, warning_cont);
 
   //   when we click on btn suiv incre counter by 1 to change to next question
-  nextBtn.addEventListener("click", () => {
+  nextBtn.addEventListener("click", (e) => {
     if (counter < QUESTION.length - 1) {
-      console.log("before", result);
       collectAnswer(result, counter);
-      console.log("after", result);
+      console.log("after2", result);
       counter++;
       addSiQs(counter, QUESTION, para, form, warning_cont);
       updateProgress(counter);
-
+      // change the title of last btn of the question to submit
       if (counter === QUESTION.length - 1) {
-        nextBtn.innerText = "Submit";
-        nextBtn.classList.add("add-green-backgr");
+        // nextBtn.innerText = "Submit";
+        e.target.classList.add("add-green-backgr");
+        e.target.innerText = "submit";
       }
     } else if (counter === QUESTION.length - 1) {
-      // for submit btn
       collectAnswer(result, counter);
+      console.log(result);
     }
+    // check answer here;
   });
 
   //   when we click on btn prev decremen counter by 1 to change to prev question
@@ -96,7 +98,6 @@ function addSiQs(counter, QUESTION, para, form, warning_cont) {
         name: `question${counter}`,
         id: `question${i}`,
         value: QUESTION[counter].choices[i],
-        checked: true,
       });
       let label = createElement("label", { for: `question${counter}` });
       label.innerText = QUESTION[counter].choices[i];

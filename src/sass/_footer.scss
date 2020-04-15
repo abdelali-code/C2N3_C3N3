@@ -5,6 +5,9 @@ footer {
     margin-bottom: 20px;
     font-family: $secondary_font;
     font-size: 16px;
+    a {
+      color: $secondary_color;
+    }
   }
 
   .navbar__link--lang {

@@ -14,7 +14,7 @@ function addProgressIndi() {
   const sp = createElement("span", { id: "indice" });
   sp.textContent = "1";
   const sp2 = createElement("span", {});
-  sp2.textContent = "/22";
+  sp2.textContent = "/23";
 
   addToparent(show_progress, [progress_indicateur]);
   addToparent(container, [show_progress, sp, sp2]);

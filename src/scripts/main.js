@@ -16,7 +16,32 @@ window.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
   let counter = 0;
   // to store the answer of the question;
-  const result = Array(QUESTION.length).fill(null);
+  // Array(QUESTION.length).fill(null);
+  const result = [
+    null,
+    null,
+    "Non",
+    "Non",
+    "Non",
+    "Non",
+    "Non",
+    "Non",
+    "Non",
+    "Non",
+    "Bien",
+    null,
+    null,
+    null,
+    "Oui",
+    "Non",
+    "Non",
+    "Non",
+    "Non",
+    "Non",
+    "Non",
+    "Non",
+    "Non",
+  ];
   root.innerHTML = "";
   const stepper = addStepper();
   const start = startBtn();

@@ -1,7 +1,7 @@
 import { createElement } from "../helpers/createElement";
 
 function addInfoMedi(info) {
-  const container = createElement("div", { class: ["hero"] });
+  const container = createElement("div", { class: ["hero", "info-medical"] });
 
   container.innerHTML = `
     <div class="hero__warning container">

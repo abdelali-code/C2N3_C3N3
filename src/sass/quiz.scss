@@ -5,6 +5,9 @@
 @import "./header";
 @import "./footer";
 
+// initial width of the progress bar
+$ininial_width: 100%/23;
+
 .progress-bar {
   width: 350px;
   margin: 24px auto;
@@ -68,6 +71,13 @@
   background-color: $warning_color !important;
 }
 
+.info-medical {
+  max-width: 750px;
+  margin: 0px auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
 %big_circle {
   text-align: center;
   width: 25px;
@@ -75,10 +85,6 @@
   border-radius: 50%;
 }
 
-// preambule
-// .preambule__container {
-//   margin: 0px auto;
-// }
 .preambule {
   background-color: $main_color;
   margin: 24px auto;
@@ -98,7 +104,6 @@
 // show show-progress
 #progre {
   display: flex;
-  // justify-content: start;
   align-items: center;
 }
 .show-progress {
@@ -106,14 +111,18 @@
   border-radius: 20px;
   height: 12px;
   margin: 32px auto;
-  width: 90%;
+  width: 750px;
   background-color: lightblue;
+  @media (max-width: 767px) {
+    width: 350px;
+  }
   .progress-indicateur {
-    width: 4.55%;
-    // border-radius-ri: 20px;
+    width: $ininial_width;
+    transition-property: width;
+    transition-duration: 2s;
+    transition-delay: 0.1s;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    // text-align: start;
     background-color: $green_color;
     height: 12px;
   }
@@ -125,7 +134,10 @@
 .start-btn__container {
   a {
     width: 50%;
-    margin-left: 24%;
+    margin-left: 30%;
+    @media (max-width: 400px) {
+      margin-left: 20%;
+    }
   }
 }
 
@@ -147,61 +159,65 @@
 
 .question {
   min-height: 150px;
-  // background-color: cadetblue;
-  text-align: center;
   display: flex;
   align-items: center;
+  font-size: 20px;
+  color: $black_color;
+  background-color: rgb(246, 246, 246);
+  border-left: 4px solid $secondary_color;
+  padding: 0px 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 .quiz_elem {
-  font-size: 16px;
   color: rgba(0, 0, 0, 0.472);
   max-width: 700px;
   min-height: 45vh;
+  font-family: $secondary_font;
 }
 
 .form {
-  padding: 48px 15px;
-  min-height: 150px;
-  // background-color: black;
-  // color: #fff;
+  padding: 15px;
+  max-width: 400px;
+  margin: 0px auto;
+  font-size: 20px;
+  margin-top: 20px;
 }
 
-// for forth choices radio
-form.flex-radio {
-  display: flex;
-  justify-content: space-between;
-  @media (max-width: 500px) {
-    flex-direction: column;
-  }
-}
-
-// for form of two choices
 .form-checkbox {
-  width: 160px;
-  text-align: end;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  width: 180px;
+  color: #000000;
+  display: flex;
+  justify-content: space-around;
+  @media (max-width: 500px) {
+    width: 155px;
+  }
   input {
-    width: 20px;
     height: 20px;
-    margin-left: 20px;
+    width: 20px;
     position: relative;
-    top: 3px;
+    top: 3.5px;
   }
 }
 
-// form input number
-.form-control {
-  width: 320px;
-  text-align: center;
-  margin: 48px auto 0px auto;
-  input {
-    width: 250;
-    border: 2px solid $secondary_color;
-    outline: none;
-    padding: 5px;
-    border-radius: 10px;
-    margin-right: 10px;
-  }
+input[type="number"] {
+  border: 2px solid $secondary_color;
+  margin-top: 48px;
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  outline: none;
+  width: 250px;
+}
+input[type="number"]:focus {
+  border: 2px solid $green_color;
+}
+
+.flex-radio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 // for submit btn

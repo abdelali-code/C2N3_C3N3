@@ -37,6 +37,11 @@ export const QUESTION = [
   },
   {
     question:
+      "cette fatigue vous oblige-t-elle à vous reposer plus de la moitié de la journée ?",
+    choices: ["Oui", "Non"],
+  },
+  {
+    question:
       "Avez-vous des difficultés importantes pour vous alimenter ou boire depuis plus de 24h ?",
     choices: ["Oui", "Non"],
   },
