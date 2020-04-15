@@ -3,6 +3,7 @@ import { addInfoMedi } from "./addInfo";
 import { updateProgress } from "./updateProgress";
 import { collectAnswer } from "./collectAnswer";
 import { checkAnswer } from "./checkAnswer";
+import { addMsgs } from "./displayMsg";
 
 function addQuiz(QUESTION, counter, result) {
   const parent = createElement("div", {}); //cont for question and additionnel info
@@ -27,25 +28,22 @@ function addQuiz(QUESTION, counter, result) {
   // display first question
   addSiQs(counter, QUESTION, para, form, warning_cont);
 
+  let resp = null;
   //   when we click on btn suiv incre counter by 1 to change to next question
-  nextBtn.addEventListener("click", (e) => {
-    if (counter < QUESTION.length - 1) {
+  nextBtn.addEventListener("click", () => {
+    if (counter <= QUESTION.length - 1) {
       collectAnswer(result, counter);
-      console.log("after2", result);
+      resp = checkAnswer(result, counter);
+      // if the this is result returned from checkAnswer
+      if (resp != null) {
+        return addMsgs(resp);
+      }
+    }
+    if (counter < QUESTION.length - 1) {
       counter++;
       addSiQs(counter, QUESTION, para, form, warning_cont);
       updateProgress(counter);
-      // change the title of last btn of the question to submit
-      if (counter === QUESTION.length - 1) {
-        // nextBtn.innerText = "Submit";
-        e.target.classList.add("add-green-backgr");
-        e.target.innerText = "submit";
-      }
-    } else if (counter === QUESTION.length - 1) {
-      collectAnswer(result, counter);
-      console.log(result);
     }
-    // check answer here;
   });
 
   //   when we click on btn prev decremen counter by 1 to change to prev question

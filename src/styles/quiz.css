@@ -319,12 +319,13 @@ footer {
 .show-progress {
   border-radius: 20px;
   height: 12px;
-  margin: 32px auto;
-  width: 750px;
+  margin: 32px 20px 32px 23%;
+  width: 50%;
   background-color: lightblue; }
   @media (max-width: 767px) {
     .show-progress {
-      width: 350px; } }
+      width: 90%;
+      margin: 32px auto; } }
   .show-progress .progress-indicateur {
     width: 4.34783%;
     transition-property: width;
@@ -365,7 +366,7 @@ footer {
 
 .quiz_elem {
   color: rgba(0, 0, 0, 0.472);
-  max-width: 700px;
+  max-width: 780px;
   min-height: 45vh;
   font-family: "Cairo", sans-serif; }
 
@@ -410,3 +411,11 @@ input[type="number"]:focus {
 
 .add-green-backgr {
   background-color: #369d53; }
+
+.msg {
+  max-width: 700px;
+  margin: 32px auto;
+  background-color: #1078ad;
+  font-family: "Cairo", sans-serif;
+  font-size: 20px;
+  padding: 10px; }

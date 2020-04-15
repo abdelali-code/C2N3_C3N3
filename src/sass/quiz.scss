@@ -110,11 +110,13 @@ $ininial_width: 100%/23;
   // border: 0.5px solid grey;
   border-radius: 20px;
   height: 12px;
-  margin: 32px auto;
-  width: 750px;
+  margin: 32px 20px 32px 23%;
+  // width: 600px;
+  width: 50%;
   background-color: lightblue;
   @media (max-width: 767px) {
-    width: 350px;
+    width: 90%;
+    margin: 32px auto;
   }
   .progress-indicateur {
     width: $ininial_width;
@@ -171,7 +173,7 @@ $ininial_width: 100%/23;
 }
 .quiz_elem {
   color: rgba(0, 0, 0, 0.472);
-  max-width: 700px;
+  max-width: 780px;
   min-height: 45vh;
   font-family: $secondary_font;
 }
@@ -223,4 +225,15 @@ input[type="number"]:focus {
 // for submit btn
 .add-green-backgr {
   background-color: $green_color;
+}
+
+// for the resut msg
+
+.msg {
+  max-width: 700px;
+  margin: 32px auto;
+  background-color: $secondary_color;
+  font-family: $secondary_font;
+  font-size: 20px;
+  padding: 10px;
 }
