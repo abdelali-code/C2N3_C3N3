@@ -1,11 +1,7 @@
 import { createElement, addToparent } from "../helpers/createElement";
 import { addInfoMedi } from "./addInfo";
-import { updateProgress } from "./updateProgress";
-import { collectAnswer } from "./collectAnswer";
-import { checkAnswer } from "./checkAnswer";
-import { addMsgs } from "./displayMsg";
 
-function addQuiz(QUESTION, counter, result) {
+function addQuiz() {
   const parent = createElement("div", {}); //cont for question and additionnel info
   const container = createElement("div", { class: ["container", "quiz_elem"] });
   const btnCont = createElement("div", { class: ["container", "btnCont"] });
@@ -23,53 +19,19 @@ function addQuiz(QUESTION, counter, result) {
     class: ["btn", "small-btn", "btn-main", "question--btn"],
   });
 
-  addToparent(btnCont, [prevBtn, nextBtn]);
-
-  // display first question
-  addSiQs(counter, QUESTION, para, form, warning_cont);
-
-  let resp = null;
-  //   when we click on btn suiv incre counter by 1 to change to next question
-  nextBtn.addEventListener("click", () => {
-    if (counter <= QUESTION.length - 1) {
-      collectAnswer(result, counter);
-      resp = checkAnswer(result, counter);
-      // if the this is result returned from checkAnswer
-      if (resp != null) {
-        return addMsgs(resp);
-      }
-    }
-    if (counter < QUESTION.length - 1) {
-      counter++;
-      addSiQs(counter, QUESTION, para, form, warning_cont);
-      updateProgress(counter);
-    }
-  });
-
-  //   when we click on btn prev decremen counter by 1 to change to prev question
-  prevBtn.addEventListener("click", () => {
-    if (counter > 0) {
-      counter--;
-      addSiQs(counter, QUESTION, para, form, warning_cont);
-      updateProgress(counter);
-    }
-    if (nextBtn.innerText === "Submit" && QUESTION.length - 2) {
-      nextBtn.innerText = "Question suivant";
-      nextBtn.classList.remove("add-green-backgr");
-    }
-  });
-
   // add btn the next and prev question;
   nextBtn.innerText = "Question suivant";
   prevBtn.innerText = "Question président";
-
-  addToparent(container, [para, form]);
-  addToparent(parent, [container, btnCont, warning_cont]);
-  return parent;
+  //
+  //
+  addToparent(btnCont, [prevBtn, nextBtn]);
+  addToparent(container, [para, form, warning_cont]);
+  addToparent(parent, [container, btnCont]);
+  return { parent, btnCont, prevBtn, nextBtn, para, form, warning_cont };
 }
 
 // for dispaly single quiz
-function addSiQs(counter, QUESTION, para, form, warning_cont) {
+export function addSiQs(counter, QUESTION, para, form, warning_cont, result) {
   // display question
   para.innerText = QUESTION[counter].question;
 
@@ -91,12 +53,16 @@ function addSiQs(counter, QUESTION, para, form, warning_cont) {
     form.innerHTML = "";
     for (let i = 0; i < QUESTION[counter].choices.length; i++) {
       let form_control = createElement("div", { class: ["form-checkbox"] });
+
       let step = createElement("input", {
         type: "radio",
         name: `question${counter}`,
         id: `question${i}`,
         value: QUESTION[counter].choices[i],
       });
+      if (QUESTION[counter].choices[i] === result[counter]) {
+        step.setAttribute("checked", true);
+      }
       let label = createElement("label", { for: `question${counter}` });
       label.innerText = QUESTION[counter].choices[i];
       addToparent(form_control, [label, step]);
@@ -111,6 +77,7 @@ function addSiQs(counter, QUESTION, para, form, warning_cont) {
       type: "number",
       name: `question${counter}`,
       id: `question${counter}`,
+      value: result[counter] === -1 ? "" : result[counter],
     });
     let label = createElement("label", { for: `question${counter}` });
     label.innerText = QUESTION[counter].label;

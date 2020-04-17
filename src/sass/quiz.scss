@@ -235,5 +235,17 @@ input[type="number"]:focus {
   background-color: $secondary_color;
   font-family: $secondary_font;
   font-size: 20px;
-  padding: 10px;
+  padding: 20px 10px;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.reprendre {
+  width: 25%;
+  margin-left: 37.5%;
+  @media (max-width: 500px) {
+    width: 50%;
+    margin-left: 21%;
+  }
 }

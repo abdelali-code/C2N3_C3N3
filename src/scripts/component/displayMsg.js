@@ -12,7 +12,7 @@ export const addMsgs = (msgs) => {
   const container = createElement("div", { class: ["container"] });
 
   for (let msg in msgs) {
-    addToparent(container, [displaMsg(msg)]);
+    addToparent(container, [displaMsg(msgs[msg])]);
   }
   return container;
 };
