@@ -63,21 +63,6 @@ $ininial_width: 100%/23;
   }
 }
 
-.add_main_color {
-  background-color: $main_color;
-}
-
-.add_warning_color {
-  background-color: $warning_color !important;
-}
-
-.info-medical {
-  max-width: 750px;
-  margin: 0px auto;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
 %big_circle {
   text-align: center;
   width: 25px;
@@ -222,21 +207,17 @@ input[type="number"]:focus {
   justify-content: space-between;
 }
 
-// for submit btn
-.add-green-backgr {
-  background-color: $green_color;
-}
-
 // for the resut msg
 
 .msg {
   max-width: 700px;
   margin: 32px auto;
-  background-color: $secondary_color;
+  background-color: $main_color;
+
   font-family: $secondary_font;
-  font-size: 20px;
+  font-size: 18px;
   padding: 20px 10px;
-  color: #fff;
+  color: #000000;
   text-align: center;
   border-radius: 10px;
 }

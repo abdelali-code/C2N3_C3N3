@@ -57,7 +57,6 @@ window.addEventListener("DOMContentLoaded", () => {
   // create the recommandations section
   const addRecm = addRecommandations();
 
-  let addQs;
   // the finish btn
   const submitBtn = createElement("button", {
     class: [
@@ -76,14 +75,14 @@ window.addEventListener("DOMContentLoaded", () => {
   });
   restartBtn.textContent = "Repredre Test";
 
-  // add the content of inferface the test;
+  // add the content of inferface of the test;
   addToparent(root, [stepper, preambule, start]);
 
-  addQs = addQuiz();
-  //
+  // function responsable of adding the question to user
+  let addQs = addQuiz();
 
   /*********************** when user start the quiz **********************************/
-  // when user start the quiz
+
   start.addEventListener("click", () => {
     // add the first question
     addSiQs(
@@ -116,26 +115,53 @@ window.addEventListener("DOMContentLoaded", () => {
       collectAnswer(result, counter);
     }
     // when we reach the question of the age
+    /*******************************question of the age **************************/
     if (counter === 11) {
       let isAccepted = isLess15(result, counter);
+      // if user enterd an age < than 15
       if (isAccepted != null) {
-        console.log("is not accepted");
+        counter = 0;
+        result = [
+          null,
+          null,
+          "Non",
+          "Non",
+          "Non",
+          "Non",
+          "Non",
+          "Non",
+          "Non",
+          "Non",
+          "Bien",
+          null,
+          null,
+          null,
+          "Oui",
+          "Non",
+          "Non",
+          "Non",
+          "Non",
+          "Non",
+          "Non",
+          "Non",
+          "Non",
+        ];
+        // remove all the content from the root
+        root.innerHTML = "";
+        // add the contetn of the acceuil page of the test
+        addToparent(root, [stepper, preambule, start]);
+        // update the design of the stepper
+        updateStepper(2, 1);
       }
     }
     // end age
+    /*******************************end question of the age **************************/
     // while counter not reach the end of the question do this
     if (counter < QUESTION.length - 1) {
       // move counter by one to indicate to the next question
       counter++;
-      // display this question to the user
-      addSiQs(
-        counter,
-        QUESTION,
-        addQs.para,
-        addQs.form,
-        addQs.warning_cont,
-        result
-      );
+      // when counter is increment dispay the appropriate question
+      addSiQs(counter, QUESTION, addQs.para, addQs.form, addQs.warning_cont, result);
       // and again update progress bar
       updateProgress(counter);
     }
@@ -153,14 +179,8 @@ window.addEventListener("DOMContentLoaded", () => {
   addQs.prevBtn.addEventListener("click", () => {
     if (counter > 0) {
       counter--;
-      addSiQs(
-        counter,
-        QUESTION,
-        addQs.para,
-        addQs.form,
-        addQs.warning_cont,
-        result
-      );
+      // when counter is decrement dispay the appropriate question
+      addSiQs(counter, QUESTION, addQs.para, addQs.form, addQs.warning_cont, result);
       updateProgress(counter);
     }
     // remove submit btn

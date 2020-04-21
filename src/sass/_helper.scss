@@ -12,3 +12,23 @@
   padding-right: 15px;
   margin: 0 auto;
 }
+
+.add_main_color {
+  background-color: $main_color;
+}
+
+.add_warning_color {
+  background-color: $warning_color !important;
+}
+
+.info-medical {
+  max-width: 750px;
+  margin: 0px auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+// for submit btn
+.add-green-backgr {
+  background-color: $green_color;
+}

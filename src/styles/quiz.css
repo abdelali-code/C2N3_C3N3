@@ -163,6 +163,21 @@ hr {
   padding-right: 15px;
   margin: 0 auto; }
 
+.add_main_color {
+  background-color: #96c5dc; }
+
+.add_warning_color {
+  background-color: #f4cf1b !important; }
+
+.info-medical {
+  max-width: 750px;
+  margin: 0px auto;
+  border-radius: 10px;
+  margin-bottom: 20px; }
+
+.add-green-backgr {
+  background-color: #369d53; }
+
 .navbar {
   height: 60px;
   background-image: url("../images/Merged bar-1.svg");
@@ -283,18 +298,6 @@ footer {
       .progress-bar-description .progress-bar-description--third {
         margin-left: 50px; } }
 
-.add_main_color {
-  background-color: #96c5dc; }
-
-.add_warning_color {
-  background-color: #f4cf1b !important; }
-
-.info-medical {
-  max-width: 750px;
-  margin: 0px auto;
-  border-radius: 10px;
-  margin-bottom: 20px; }
-
 .progress-bar span {
   text-align: center;
   width: 25px;
@@ -409,17 +412,14 @@ input[type="number"]:focus {
   flex-wrap: wrap;
   justify-content: space-between; }
 
-.add-green-backgr {
-  background-color: #369d53; }
-
 .msg {
   max-width: 700px;
   margin: 32px auto;
-  background-color: #1078ad;
+  background-color: #96c5dc;
   font-family: "Cairo", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   padding: 20px 10px;
-  color: #fff;
+  color: #000000;
   text-align: center;
   border-radius: 10px; }
 
