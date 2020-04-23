@@ -7,14 +7,11 @@ function addQuiz() {
   const btnCont = createElement("div", { class: ["container", "btnCont"] });
   const para = createElement("p", { class: ["question"] });
   const form = createElement("form", { class: ["form"] });
-
   // for display warning msg
   const warning_cont = createElement("div", {});
-
   const nextBtn = createElement("button", {
     class: ["btn", "small-btn", "btn-main", "question--btn"],
   });
-
   const prevBtn = createElement("button", {
     class: ["btn", "small-btn", "btn-main", "question--btn"],
   });
@@ -31,10 +28,9 @@ function addQuiz() {
 }
 
 // for dispaly single quiz
-export function addSiQs(counter, QUESTION, para, form, warning_cont, result) {
+function addSiQs(counter, QUESTION, para, form, warning_cont, result) {
   // display question
   para.innerText = QUESTION[counter].question;
-
   // to append warning msg to warning container
   if (QUESTION[counter].addInfo) {
     warning_cont.appendChild(addInfoMedi(QUESTION[counter].addInfo));
@@ -86,4 +82,4 @@ export function addSiQs(counter, QUESTION, para, form, warning_cont, result) {
   }
 }
 
-export { addQuiz };
+export { addQuiz, addSiQs };

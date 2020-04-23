@@ -7,7 +7,7 @@ export const collectAnswer = (arr, counter) => {
     if (!isNaN(parseFloat(inps[0].value))) {
       arr[counter] = Number(inps[0].value);
     } else {
-      arr[counter] = -1;
+      arr[counter] = null;
     }
   }
   // there is multipe input in the form;
