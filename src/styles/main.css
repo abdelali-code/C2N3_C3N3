@@ -274,6 +274,14 @@ footer {
         height: 100px;
         width: 60%; } }
 
+@media (max-width: 580px) {
+  .home {
+    width: 80% !important; } }
+
+@media (max-width: 580px) {
+  .home img {
+    width: 40% !important; } }
+
 .information {
   background-color: #96c5dc;
   text-align: center;
@@ -734,26 +742,6 @@ input[type="number"]:focus {
     .reprendre {
       width: 50%;
       margin-left: 21%; } }
-
-.alert {
-  position: absolute;
-  top: 25%;
-  left: 30%;
-  background-color: #ff4848;
-  max-width: 580px;
-  text-align: center;
-  border-radius: 10px;
-  color: #fff;
-  font-weight: normal; }
-  .alert p {
-    padding: 32px;
-    margin: 20px auto; }
-  .alert header {
-    float: right;
-    margin-right: 10px;
-    cursor: pointer;
-    font-size: 32px;
-    color: #000000; }
 
 .doctor {
   padding: 20px 0px; }

@@ -231,25 +231,26 @@ input[type="number"]:focus {
   }
 }
 
-.alert {
-  position: absolute;
-  top: 25%;
-  left: 30%;
-  background-color: rgb(255, 72, 72);
-  max-width: 580px;
-  text-align: center;
-  border-radius: 10px;
-  color: #fff;
-  font-weight: normal;
-  p {
-    padding: 32px;
-    margin: 20px auto;
-  }
-  header {
-    float: right;
-    margin-right: 10px;
-    cursor: pointer;
-    font-size: 32px;
-    color: #000000;
-  }
-}
+// .alert {
+//   position: absolute;
+//   top: 25%;
+//   left: 30%;
+//   background-color: rgb(255, 72, 72);
+//   max-width: 580px;
+//   text-align: center;
+//   border-radius: 10px;
+//   color: #fff;
+//   font-weight: normal;
+//   display: none;
+//   p {
+//     padding: 32px;
+//     margin: 20px auto;
+//   }
+//   header {
+//     float: right;
+//     margin-right: 10px;
+//     cursor: pointer;
+//     font-size: 32px;
+//     color: #000000;
+//   }
+// }

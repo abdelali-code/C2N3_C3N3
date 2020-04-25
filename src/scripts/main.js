@@ -11,7 +11,6 @@ import { collectAnswer } from "./component/collectAnswer";
 import { updateProgress } from "./component/updateProgress";
 import { checkAnswer, isLess15 } from "./component/checkAnswer";
 import { addMsgs, displaMsg } from "./component/displayMsg";
-import { alertUser } from "./component/alert";
 
 //
 //
@@ -134,12 +133,13 @@ window.addEventListener("DOMContentLoaded", () => {
       if (counter == 0) {
         let is_accepted = isLess15(result, 0);
         if (is_accepted) {
-          updateStepper(2, 1);
+          result = Array(23).fill(null);
+          updateStepper(2, 3);
           root.removeChild(addProgressIndice);
           // display the result of the test to the user
           root.replaceChild(displaMsg(is_accepted), addQs.parent);
-          // add a button to restart the test
           root.insertBefore(restartBtn, addRecm);
+          return;
         }
       }
       // end age
@@ -195,7 +195,8 @@ window.addEventListener("DOMContentLoaded", () => {
     if (counter > 0) {
       if (
         (counter === 3 && result[1] === "Non") ||
-        (counter === 9 && result[7] === "Non")
+        (counter === 9 && result[7] === "Non") ||
+        result[7] == null
       ) {
         counter--;
       }

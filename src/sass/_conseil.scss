@@ -20,6 +20,17 @@
   }
 }
 
+.home {
+  @media (max-width: 580px) {
+    width: 80% !important;
+  }
+  img {
+    @media (max-width: 580px) {
+      width: 40% !important;
+    }
+  }
+}
+
 // information seection
 
 .information {
