@@ -1,180 +1,171 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo&family=Open+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles/normalize.css">
-    <link rel="stylesheet" href="./styles/main.css" />
-    <title>corona virus ....</title>
-  </head>
-  <body>
-    <!-- navigation -->
-    <nav class="navbar">
-      <a href="index.html"
-        ><img src="./images/logo__sante-1.svg" alt="ministre de santé" height="100%"
-      /></a>
-      <ul class="navbar__list">
-        <li class="navbar__item"><a href="conseil.html" class="navbar__link">Conseil</a></li>
-        <li class="navbar__item"><a href="index.html" class="navbar__link active">Acceuil</a></li>
-        <li class="navbar__item navbar__item--border">
-          <a href="#" class="navbar__link navbar__link--lang"
-            ><span>عربي</span
-            ><img src="./images/www.svg" alt=""
-          /></a>
-        </li>
-      </ul>
-    </nav>
-    <main>
-      <!-- warning  and hero section-->
-      <section class="hero">
-        <div class="hero__warning container">
-          <h3 class="hero__title">LA DERNIÈRE INFO MÉDICALE</h3>
-          <p class="hero__descri">
-            La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait
-            être un facteur d'aggravation de l’infection. En cas de fièvre,
-            prenez du paracétamol. N'arrêtez pas votre traitement ! Consultez
-            votre médecin ou votre pharmacien
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Open+Sans:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/main.css" />
+  <title>corona virus ....</title>
+</head>
+
+<body>
+  <!-- navigation -->
+  <nav class="navbar">
+    <a href="index.html"><img src="./images/logo__sante-1.svg" alt="ministre de santé" height="100%" /></a>
+    <ul class="navbar__list">
+      <li class="navbar__item"><a href="conseil.html" class="navbar__link" data-key="conseil">Conseil</a></li>
+      <li class="navbar__item"><a href="index.html" class="navbar__link active" data-key="acceuil">Acceuil</a></li>
+      <li class="navbar__item navbar__item--border" id="lang">
+        <a href="#" class="navbar__link navbar__link--lang"><span data-key="c_lang">عربي</span><img
+            src="./images/www.svg" alt="" /></a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <!-- warning  and hero section-->
+    <section class="hero">
+      <div class="hero__warning container">
+        <h3 class="hero__title" data-key="der_info">LA DERNIÈRE INFO MÉDICALE</h3>
+        <p class="hero__descri" data-key="der_info_desc">
+          La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait
+          être un facteur d'aggravation de l’infection. En cas de fièvre,
+          prenez du paracétamol. N'arrêtez pas votre traitement ! Consultez
+          votre médecin ou votre pharmacien
+        </p>
+      </div>
+    </section>
+    <!-- comment protger section -->
+    <!-- doctor section -->
+    <section class="doctor">
+      <div class="container doctor__container">
+        <div class="doctor--container-img">
+          <img src="./images/doctor.svg" alt="" width="100%">
+        </div>
+        <div class="doctor--container-desc">
+          <h3 class="title" data-key="doctor_title"> Vous pensez avoir été exposé au Coronavirus COVID-19 et avez des
+            symptômes ?</h3>
+          <img src="./images/1f637.png" alt="" />
+          <p data-key="doctor_cons">
+            <span> Je reste vigilant ?</span> <span> Je programme une téléconsultation ?</span> <span>J'appelle le 15
+              ?</span> <span> faite le test pour répondre en citoyen</span> <span>éclairé selon vos symptômes.</span>
           </p>
-        </div>
-      </section>
-      <!-- comment protger section -->
-         <!-- doctor section -->
-         <section class="doctor">
-           <div class="container doctor__container">
-            <div class="doctor--container-img">
-              <img src="./images/doctor.svg" alt="" width="100%">
-            </div>
-            <div class="doctor--container-desc">
-              <h3 class="title"> Vous pensez avoir été exposé au Coronavirus COVID-19 et avez des symptômes ?</h3>
-              <img src="./images/1f637.png" alt="" />
-              <p><span> Je reste vigilant ?</span> <span> Je programme une téléconsultation ?</span> <span>J'appelle le 15 ?</span> <span> faite le test pour répondre en citoyen</span> <span>éclairé selon vos symptômes.</span></p>
-              <a href="quiz.html" class="btn btn-main">Demarer le test</a>
-            </div>
-        </div>
-        </section>
-        <!-- end of doctor section -->
-      <!-- symptomes -->
-      <section class="symptomes">
-        <h3 class="title">Quels sont les symptômes à surveiller ?</h3>
-        <div class="symptomes__types">
-          <figure class="figure">
-            <div class="figure-img__container">
-              <img src="./images/Asset 13.png" alt="" height="80%"/>
-            </div>
-            <figcaption class="caption">
-              Fièvre
-            </figcaption>
-          </figure>
-          <figure class="figure">
-            <div class="figure-img__container">
-              <img src="./images/Asset 11.png" alt="" />
-            </div>
-            <figcaption class="caption">
-              Nausées <br />et vomissements
-            </figcaption>
-          </figure>
-        </div>
-        <div class="symptomes__types">
-          <figure class="figure">
-            <div class="figure-img__container">
-              <img src="./images/Asset 12.png" alt="" />
-            </div>
-            <figcaption class="caption">Gêne <br />respiratoire</figcaption>
-          </figure>
-          <figure class="figure">
-            <div class="figure-img__container">
-              <img src="./images/Asset 14.png" alt="" />
-            </div>
-            <figcaption class="caption">Toux et maux <br />de gorge</figcaption>
-          </figure>
-        </div>
-        </div>
-      </section>
-      <!-- end of symptomes -->
-      <!-- recommandations -->
-      <section class="recommandations">
-        <h3 class="title recommandations__title">Recommandations officielles</h3>
-        <div class="container recommandations__desc">
-          <div class="recommandations__list">
-            <h4 class="recommandations__list--title">Si vous pensez être malade,</h4>
-            <ul class="recommandations__items">
-              <li>évitez les endroits publics.</li>
-              <li>Ne rendez pas visite aux personnes fragiles.</li>
-              <li>Évitez de sortir de chez vous.</li>
-              <li>Respectez les mesures barrière (lavage de main, masque).</li>
-              <li>
-                Surveillez vos symptômes, l’évolution de votre température
-              </li>
-              <li>corporelle et recherchez un avis médical.</li>
-            </ul>
-          </div>
-          <div class="recommandations__contact">
-            <h3 class="recommandations__contact--title">Appel Gratuit</h3>
-            <a href="tel:+2120801004747" class="recommandations__contact--phone"
-              >080 100 47 47</a
-            >
-            <a
-              href="www.sante.gov.ma"
-              target="_blank"
-              class="recommandations__contact--site"
-              >www.sante.gov.ma</a
-            >
-          </div>
-        </div>
-      </section>
-      <!-- end of recommandations -->
-      <!-- demander test -->
-      <section class="demande-test">
-        <h3 class="title">
-          Vous pensez avoir été exposé au Coronavirus COVID-19 et avez des
-          symptômes ?
-        </h3>
-        <img src="./images/1f637.png" alt="" class="demande-test__icon"/><br>
-        <a href="quiz.html" class="btn btn-main">Demarer le test</a>
-      </section>
-      <!-- end demande test -->
-  
-    <footer>
-      <div class="container">
-      <img src="./images/logo__sante-1.svg" alt="ministre de santé" />
-      <div class="footer--content">
-        <div class="nav">
-          <ul>
-            <li>
-              <a href="#" class="navbar__link--lang"
-                ><span>عربي</span
-                ><img
-                  src="./images/www.svg"
-                  alt=""
-              /></a>
-              <li><a href="#">Acceuil</a></li>
-            <li><a href="conseil.html">Conseil</a></li>
-            </li>
-          </ul>
-        </div>
-        <div class="footer--contact">
-          <h3 class="title">Contacts utiles</h3>
-          <p>Chiffre économique "Alo épidémie vigilance"</p>
-          <p class="phone-num">080 100 47 47</p>
-          <p>Aide médicale urgente</p>
-          <p class="phone-num">114</p>
-        </div>
-        <div class="footer-info">
-          <p>Algorithme d'orientation mis à jour sur les recommandations en vigueur 
-            au 22/03/2020 à 16h15.  Ce site d’information n’est pas un dispositif médical, 
-            il ne délivre pas d’avis médical. Projet solidaire d'urgence,financé par l’Alliance 
-            Digitale contre le COVID-19 : @maladiecovid19
-          </p>
+          <a href="quiz.html" class="btn btn-main" data-key="demarer_test">Demarer le test</a>
         </div>
       </div>
-    </div>
-    <div class="footer--foot">
-    </div>
+    </section>
+    <!-- end of doctor section -->
+    <!-- symptomes -->
+    <section class="symptomes">
+      <h3 class="title" data-key="symptome_title">Quels sont les symptômes à surveiller ?</h3>
+      <div class="symptomes__types">
+        <figure class="figure">
+          <div class="figure-img__container">
+            <img src="./images/Asset 13.png" alt="" />
+          </div>
+          <figcaption class="caption" data-key="symptome_1">
+            Fièvre
+          </figcaption>
+        </figure>
+        <figure class="figure">
+          <div class="figure-img__container">
+            <img src="./images/Asset 11.png" alt="" />
+          </div>
+          <figcaption class="caption" data-key="symptome_2">
+            Nausées <br />et vomissements
+          </figcaption>
+        </figure>
+      </div>
+      <div class="symptomes__types">
+        <figure class="figure">
+          <div class="figure-img__container">
+            <img src="./images/Asset 12.png" alt="" />
+          </div>
+          <figcaption class="caption" data-key="symptome_3">Gêne <br />respiratoire</figcaption>
+        </figure>
+        <figure class="figure">
+          <div class="figure-img__container">
+            <img src="./images/Asset 14.png" alt="" />
+          </div>
+          <figcaption class="caption" data-key="symptome_4">Toux et maux <br />de gorge</figcaption>
+        </figure>
+      </div>
+      </div>
+    </section>
+    <!-- end of symptomes -->
+    <!-- recommandations -->
+    <section class="recommandations" dir="auto">
+      <h3 class="title recommandations__title" data-key="rec_title">Recommandations officielles</h3>
+      <div class="container recommandations__desc">
+        <div class="recommandations__list">
+          <h4 class="recommandations__list--title" data-key="rec_header">Si vous pensez être malade,</h4>
+          <ul class="recommandations__items">
+            <li data-key="rec_1">évitez les endroits publics.</li>
+            <li data-key="rec_2">Ne rendez pas visite aux personnes fragiles.</li>
+            <li data-key="rec_3">Évitez de sortir de chez vous.</li>
+            <li data-key="rec_4">Respectez les mesures barrière (lavage de main, masque).</li>
+            <li data-key="rec_5">
+              Surveillez vos symptômes, l’évolution de votre température
+            </li>
+            <li data-key="rec_6">corporelle et recherchez un avis médical.</li>
+          </ul>
+        </div>
+        <div class="recommandations__contact">
+          <h3 class="recommandations__contact--title" data-key="appel">Appel Gratuit</h3>
+          <a href="tel:+2120801004747" class="recommandations__contact--phone">080 100 47 47</a>
+          <a href="www.sante.gov.ma" target="_blank" class="recommandations__contact--site">www.sante.gov.ma</a>
+        </div>
+      </div>
+    </section>
+    <!-- end of recommandations -->
+    <!-- demander test -->
+    <section class="demande-test">
+      <h3 class="title" data-key="dema_tes_tit">
+        Vous pensez avoir été exposé au Coronavirus COVID-19 et avez des
+        symptômes ?
+      </h3>
+      <img src="./images/1f637.png" alt="" class="demande-test__icon" /><br>
+      <a href="quiz.html" class="btn btn-main" data-key="demarer_test">Demarer le test</a>
+    </section>
+    <!-- end demande test -->
+
+    <footer>
+      <div class="container">
+        <img src="./images/logo__sante-1.svg" alt="ministre de santé" />
+        <div class="footer--content">
+          <div class="nav">
+            <ul>
+              <li>
+                <a href="#" class="navbar__link--lang"><span data-key="c_lang">عربي</span><img src="./images/www.svg"
+                    alt="" /></a>
+              <li><a href="index.html" data-key="acceuil">Acceuil</a></li>
+              <li><a href="conseil.html" data-key="conseil">Conseil</a></li>
+              </li>
+            </ul>
+          </div>
+          <div class="footer--contact">
+            <h3 class="title" data-key="conta_util">Contacts utiles</h3>
+            <p data-key="chiffre">Chiffre économique "Alo épidémie vigilance"</p>
+            <p class="phone-num">080 100 47 47</p>
+            <p data-key="aide_medi">Aide médicale urgente</p>
+            <p class="phone-num">114</p>
+          </div>
+          <div class="footer-info">
+            <p>Algorithme d'orientation mis à jour sur les recommandations en vigueur
+              au 22/03/2020 à 16h15. Ce site d’information n’est pas un dispositif médical,
+              il ne délivre pas d’avis médical. Projet solidaire d'urgence,financé par l’Alliance
+              Digitale contre le COVID-19 : @maladiecovid19
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer--foot">
+      </div>
     </footer>
   </main>
-  </body>
+  <script src="./dev/lang.js"></script>
+</body>
+
 </html>

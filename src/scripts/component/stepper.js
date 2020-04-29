@@ -12,9 +12,9 @@ function addStepper() {
               <span class="big-circle" id="sp3"><i class="circle" id="c3"></i></span>
             </div>
             <div class="progress-bar-description">
-              <p class="progress-bar-description--first">Informations</p>
-              <p class="progress-bar-description--second">Questionnaire</p>
-              <p class="progress-bar-description--third">Résultats</p>
+              <p class="progress-bar-description--first" data-key="information">Informations</p>
+              <p class="progress-bar-description--second" data-key = "questionnaire">Questionnaire</p>
+              <p class="progress-bar-description--third" data-key="result">Résultats</p>
             </div>                     
     `;
   return container;

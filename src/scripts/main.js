@@ -145,7 +145,7 @@ window.addEventListener("DOMContentLoaded", () => {
       // end age
       if (
         (counter === 1 && result[1] == "Non") ||
-        (counter === 7 && result[7] === "Non")
+        (counter === 7 && (result[7] === "Non" || result[7] == null))
       ) {
         counter++;
       }
@@ -195,8 +195,7 @@ window.addEventListener("DOMContentLoaded", () => {
     if (counter > 0) {
       if (
         (counter === 3 && result[1] === "Non") ||
-        (counter === 9 && result[7] === "Non") ||
-        result[7] == null
+        (counter === 9 && (result[7] === "Non" || result[7] == null))
       ) {
         counter--;
       }

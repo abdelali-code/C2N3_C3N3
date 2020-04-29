@@ -10,10 +10,10 @@ function addQuiz() {
   // for display warning msg
   const warning_cont = createElement("div", {});
   const nextBtn = createElement("button", {
-    class: ["btn", "small-btn", "btn-main", "question--btn"],
+    class: ["btn", "small-btn", "btn-main", "question--btn"]
   });
   const prevBtn = createElement("button", {
-    class: ["btn", "small-btn", "btn-main", "question--btn"],
+    class: ["btn", "small-btn", "btn-main", "question--btn"]
   });
 
   // add btn the next and prev question;

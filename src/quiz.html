@@ -1,88 +1,75 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo&family=Open+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles/normalize.css">
-    <link rel="stylesheet" href="./styles/quiz.css" />
-    <title>corona virus Test ....</title>
-  </head>
-  <body>
-    <main>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Open+Sans:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/quiz.css" />
+  <title>corona virus Test ....</title>
+</head>
+
+<body>
+  <main>
     <!-- navigation -->
     <nav class="navbar">
-      <a href="index.html"
-        ><img src="./images/logo__sante-1.svg" alt="ministre de santé" height="100%"
-      /></a>
+      <a href="index.html"><img src="./images/logo__sante-1.svg" alt="ministre de santé" height="100%" /></a>
       <ul class="navbar__list">
-        <li class="navbar__item"><a href="conseil.html" class="navbar__link">Conseil</a></li>
-        <li class="navbar__item"><a href="index.html" class="navbar__link">Acceuil</a></li>
-        <li class="navbar__item navbar__item--border">
-          <a href="#" class="navbar__link navbar__link--lang"
-            ><span>عربي</span
-            ><img src="./images/www.svg" alt=""
-          /></a>
+        <li class="navbar__item"><a href="conseil.html" class="navbar__link" data-key="conseil">Conseil</a></li>
+        <li class="navbar__item"><a href="index.html" class="navbar__link" data-key="acceuil">Acceuil</a></li>
+        <li class="navbar__item navbar__item--border" id="lang">
+          <a href="#" class="navbar__link navbar__link--lang"><span data-key="c_lang">عربي</span><img
+              src="./images/www.svg" alt="" /></a>
         </li>
       </ul>
     </nav>
-    <div  id="root">
+    <div id="root">
       <div class="container">
         <p>your browser doesn't support javascript</p>
         <a href="https://support.google.com/adsense/answer/12654?hl=fr" class="btn">try to activate it</a>
       </div>
     </div>
-    <div class="alert" id="alert">
-      <header id="close">X</header>
-      <p></p>
-    </div>;
 
 
-   
+
     <footer>
       <div class="container">
-      <img src="./images/logo__sante-1.svg" alt="ministre de santé" />
-      <div class="footer--content">
-        <div class="nav">
-          <ul>
-            <li>
-              <a href="#" class="navbar__link--lang"
-                ><span>عربي</span
-                ><img
-                  src="./images/www.svg"
-                  alt=""
-              /></a>
-              <li><a href="index.html">Acceuil</a></li>
-            <li><a href="conseil.html">Conseil</a></li>
-            </li>
-          </ul>
-        </div>
-        <div class="footer--contact">
-          <h3 class="title">Contacts utiles</h3>
-          <p>Chiffre économique "Alo épidémie vigilance"</p>
-          <p class="phone-num">080 100 47 47</p>
-          <p>Aide médicale urgente</p>
-          <p class="phone-num">114</p>
-        </div>
-        <div class="footer-info">
-          <p>Algorithme d'orientation mis à jour sur les recommandations en vigueur 
-            au 22/03/2020 à 16h15.  Ce site d’information n’est pas un dispositif médical, 
-            il ne délivre pas d’avis médical. Projet solidaire d'urgence,financé par l’Alliance 
-            Digitale contre le COVID-19 : @maladiecovid19
-          </p>
+        <img src="./images/logo__sante-1.svg" alt="ministre de santé" />
+        <div class="footer--content">
+          <div class="nav">
+            <ul>
+              <li>
+                <a href="#" class="navbar__link--lang"><span data-key="c_lang">عربي</span><img src="./images/www.svg"
+                    alt="" /></a>
+              <li><a href="index.html" data-key="acceuil">Acceuil</a></li>
+              <li><a href="conseil.html" data-key="conseil">Conseil</a></li>
+              </li>
+            </ul>
+          </div>
+          <div class="footer--contact">
+            <h3 class="title" data-key="conta_util">Contacts utiles</h3>
+            <p data-key="chiffre">Chiffre économique "Alo épidémie vigilance"</p>
+            <p class="phone-num">080 100 47 47</p>
+            <p data-key="aide_medi">Aide médicale urgente</p>
+            <p class="phone-num">114</p>
+          </div>
+          <div class="footer-info">
+            <p>Algorithme d'orientation mis à jour sur les recommandations en vigueur
+              au 22/03/2020 à 16h15. Ce site d’information n’est pas un dispositif médical,
+              il ne délivre pas d’avis médical. Projet solidaire d'urgence,financé par l’Alliance
+              Digitale contre le COVID-19 : @maladiecovid19
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="footer--foot">
-    </div>
+      <div class="footer--foot">
+      </div>
     </footer>
   </main>
-    <script src="./dev/bundle.js"></script>
-  </body>
+  <script src="./dev/bundle.js"></script>
+  <script src="./dev/lang.js"></script>
+</body>
+
 </html>
-
-
-

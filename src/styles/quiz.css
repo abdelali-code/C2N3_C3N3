@@ -285,7 +285,9 @@ footer {
 .progress-bar-description {
   max-width: 370px;
   margin: 0px auto;
-  font-size: 12px; }
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between; }
   .progress-bar-description p {
     display: inline-block;
     position: relative;

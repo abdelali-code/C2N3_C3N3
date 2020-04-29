@@ -47,6 +47,8 @@ $ininial_width: 100%/23;
   max-width: 370px;
   margin: 0px auto;
   font-size: 12px;
+  display: flex;
+  justify-content: space-between;
   p {
     display: inline-block;
     position: relative;
