@@ -74,6 +74,7 @@ function addSiQs(counter, QUESTION, para, form, warning_cont, result) {
       name: `question${counter}`,
       id: `question${counter}`,
       value: result[counter] === -1 ? "" : result[counter],
+      placeholder: `  ${QUESTION[counter].label}`
     });
     let label = createElement("label", { for: `question${counter}` });
     label.innerText = QUESTION[counter].label;

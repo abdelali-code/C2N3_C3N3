@@ -12,13 +12,13 @@ html {
   font-size: 10px; }
 
 body {
-  font-size: 1.6em;
+  font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
   line-height: 1.7;
   font-weight: bolder; }
   @media (max-width: 667px) {
     body {
-      font-size: 1.4em; } }
+      font-size: 1.4rem; } }
 
 ul {
   list-style: none; }
@@ -38,12 +38,12 @@ main {
 
 .title {
   color: #1078ad;
-  font-size: 32px;
+  font-size: 2.5rem;
   padding: 15px 0px;
   text-align: center; }
   @media (max-width: 767px) {
     .title {
-      font-size: 26px; } }
+      font-size: 2rem; } }
 
 .btn {
   display: inline-block;
@@ -57,7 +57,7 @@ main {
   max-width: 500px;
   outline: none;
   border: none;
-  font-size: 20px;
+  font-size: 2rem;
   cursor: pointer; }
 
 .small-btn {
@@ -96,7 +96,7 @@ hr {
   text-align: center;
   background-color: #f4cf1b;
   color: #000;
-  font-size: 18px;
+  font-size: 1.5rem;
   padding: 0px 5px; }
   .hero .hero__warning {
     max-width: 667px;
@@ -120,7 +120,7 @@ hr {
   padding: 20px 0px; }
   .recommandations .recommandations__desc {
     font-family: "Cairo", sans-serif;
-    font-size: 20px;
+    font-size: 2rem;
     line-height: 1.9;
     display: flex;
     align-items: center;
@@ -223,7 +223,7 @@ footer {
   footer li {
     margin-bottom: 20px;
     font-family: "Cairo", sans-serif;
-    font-size: 16px; }
+    font-size: 1.6rem; }
     footer li a {
       color: #1078ad; }
   footer .navbar__link--lang {
@@ -236,9 +236,9 @@ footer {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  font-size: 14px; }
+  font-size: 1.4rem; }
   .footer--content .title {
-    font-size: 18px;
+    font-size: 1.8rem;
     margin-top: 24px; }
 
 .footer--contact {
@@ -319,13 +319,13 @@ html {
   font-size: 10px; }
 
 body {
-  font-size: 1.6em;
+  font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
   line-height: 1.7;
   font-weight: bolder; }
   @media (max-width: 667px) {
     body {
-      font-size: 1.4em; } }
+      font-size: 1.4rem; } }
 
 ul {
   list-style: none; }
@@ -345,12 +345,12 @@ main {
 
 .title {
   color: #1078ad;
-  font-size: 32px;
+  font-size: 2.5rem;
   padding: 15px 0px;
   text-align: center; }
   @media (max-width: 767px) {
     .title {
-      font-size: 26px; } }
+      font-size: 2rem; } }
 
 .btn {
   display: inline-block;
@@ -364,7 +364,7 @@ main {
   max-width: 500px;
   outline: none;
   border: none;
-  font-size: 20px;
+  font-size: 2rem;
   cursor: pointer; }
 
 .small-btn {
@@ -403,7 +403,7 @@ hr {
   text-align: center;
   background-color: #f4cf1b;
   color: #000;
-  font-size: 18px;
+  font-size: 1.5rem;
   padding: 0px 5px; }
   .hero .hero__warning {
     max-width: 667px;
@@ -427,7 +427,7 @@ hr {
   padding: 20px 0px; }
   .recommandations .recommandations__desc {
     font-family: "Cairo", sans-serif;
-    font-size: 20px;
+    font-size: 2rem;
     line-height: 1.9;
     display: flex;
     align-items: center;
@@ -530,7 +530,7 @@ footer {
   footer li {
     margin-bottom: 20px;
     font-family: "Cairo", sans-serif;
-    font-size: 16px; }
+    font-size: 1.6rem; }
     footer li a {
       color: #1078ad; }
   footer .navbar__link--lang {
@@ -543,9 +543,9 @@ footer {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  font-size: 14px; }
+  font-size: 1.4rem; }
   .footer--content .title {
-    font-size: 18px;
+    font-size: 1.8rem;
     margin-top: 24px; }
 
 .footer--contact {
@@ -597,7 +597,7 @@ footer {
 .progress-bar-description {
   max-width: 370px;
   margin: 0px auto;
-  font-size: 12px;
+  font-size: 1.2rem;
   display: flex;
   justify-content: space-between; }
   .progress-bar-description p {
@@ -623,7 +623,7 @@ footer {
   margin: 24px auto;
   border-radius: 10px;
   text-align: center;
-  font-size: 20px;
+  font-size: 2rem;
   font-family: "Cairo", sans-serif; }
   .preambule p {
     padding: 24px;
@@ -667,13 +667,13 @@ footer {
   max-width: 500px; }
   @media (max-width: 500px) {
     .btnCont button {
-      font-size: 16px; } }
+      font-size: 1.6rem; } }
 
 .question {
   min-height: 150px;
   display: flex;
   align-items: center;
-  font-size: 20px;
+  font-size: 2rem;
   color: #000;
   background-color: #f6f6f6;
   border-left: 4px solid #1078ad;
@@ -691,7 +691,7 @@ footer {
   padding: 15px;
   max-width: 400px;
   margin: 0px auto;
-  font-size: 20px;
+  font-size: 2rem;
   margin-top: 20px; }
 
 .form-checkbox {
@@ -731,7 +731,7 @@ input[type="number"]:focus {
   margin: 32px auto;
   background-color: #1078ad;
   font-family: "Cairo", sans-serif;
-  font-size: 18px;
+  font-size: 1.8rem;
   padding: 20px 10px;
   color: #fff;
   text-align: center;
@@ -764,5 +764,5 @@ input[type="number"]:focus {
     .doctor .doctor__container .doctor--container-desc span {
       display: block;
       line-height: 1.9;
-      font-size: 20px;
+      font-size: 2rem;
       color: rgba(0, 0, 0, 0.52); }

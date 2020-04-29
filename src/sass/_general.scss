@@ -15,12 +15,12 @@ html {
 }
 
 body {
-  font-size: 1.6em;
+  font-size: 1.6rem;
   font-family: $main_font;
   line-height: 1.7;
   font-weight: bolder;
   @media (max-width: 667px) {
-    font-size: 1.4em;
+    font-size: 1.4rem;
   }
 }
 
@@ -47,11 +47,11 @@ main {
 
 .title {
   color: $secondary_color;
-  font-size: 32px;
+  font-size: 2.5rem;
   padding: 15px 0px;
   text-align: center;
   @media (max-width: 767px) {
-    font-size: 26px;
+    font-size: 2rem;
   }
 }
 
@@ -67,7 +67,7 @@ main {
   max-width: 500px;
   outline: none;
   border: none;
-  font-size: 20px;
+  font-size: 2rem;
   cursor: pointer;
 }
 
