@@ -5,7 +5,7 @@ import { addToparent, createElement } from "./helpers/createElement";
 import { startBtn, addPreambule } from "./component/peambule";
 import { addQuiz, addSiQs } from "./component/addQuiz";
 import { addRecommandations } from "./component/addRecommand";
-import { QUESTION } from "./helpers/question";
+import { QUESTION as question, QUESTION_AR } from "./helpers/question";
 import { updateStepper } from "./component/updateStepper";
 import { collectAnswer } from "./component/collectAnswer";
 import { updateProgress } from "./component/updateProgress";
@@ -36,6 +36,7 @@ import { addMsgs, displaMsg } from "./component/displayMsg";
 window.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
   let counter = 0;
+  let QUESTION;
   // to store the answer of the question;
   // Array(QUESTION.length).fill(null);
   let result = Array(23).fill(null);
@@ -82,6 +83,12 @@ window.addEventListener("DOMContentLoaded", () => {
   /*********************** when user start the quiz **********************************/
 
   start.addEventListener("click", () => {
+    if (localStorage.getItem("langue") === "arabe") {
+      QUESTION = QUESTION_AR;
+    }
+    else {
+      QUESTION = question;
+    }
     // add the first question
     addSiQs(
       counter,
@@ -126,6 +133,12 @@ window.addEventListener("DOMContentLoaded", () => {
   // *************************move to the next question ******************************/
   //   when we click on btn suiv incre counter by 1 to change to the next question
   addQs.nextBtn.addEventListener("click", () => {
+    if (localStorage.getItem("langue") === "arabe") {
+      QUESTION = QUESTION_AR;
+    }
+    else {
+      QUESTION = question;
+    }
     if (counter <= QUESTION.length - 1) {
       // collect the first user choice
       collectAnswer(result, counter);
@@ -192,6 +205,12 @@ window.addEventListener("DOMContentLoaded", () => {
   /*************************return the previous question ******************************/
   //   when we click on prev question btn decrement counter by 1 to change to prev question
   addQs.prevBtn.addEventListener("click", () => {
+    if (localStorage.getItem("langue") === "arabe") {
+      QUESTION = QUESTION_AR;
+    }
+    else {
+      QUESTION = question;
+    }
     if (counter > 0) {
       if (
         (counter === 3 && result[1] === "Non") ||
