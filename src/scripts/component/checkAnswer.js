@@ -34,7 +34,7 @@ export const checkAnswer = (arr) => {
         return { res1: responce.res1, res9: responce.res9 };
       }
       // Sans facteur de gravité & 50-69 ans,
-      else if (
+      if (
         (fac_maj + fac_maj === 0 && arr[1] >= 50 && arr[1] <= 69) ||
         fac_min > 0
       ) {
@@ -45,12 +45,12 @@ export const checkAnswer = (arr) => {
         };
       }
       // Tout patient avec ou sans facteur pronostique avec au moins un facteur de gravité majeur
-      else if (fac_maj > 0) {
+      if (fac_maj > 0) {
         return { res3: responce.res3, res9: responce.res9 };
       }
     }
     // Tout patient avec un facteur pronostique ou plus
-    else if (fac_prono > 0) {
+    if (fac_prono > 0) {
       // Aucun facteur de gravité ou Un seul facteur de gravité mineur
       if (fac_maj === 0 && (fac_min === 0 || fac_min === 1)) {
         return {
@@ -60,35 +60,35 @@ export const checkAnswer = (arr) => {
         };
       }
       // Au moins deux facteurs de gravité mineurs
-      else if (fac_min > 1) return { res3: responce.res3, res9: responce.res9 };
+      if (fac_min > 1) return { res3: responce.res3, res9: responce.res9 };
       // Tout patient avec ou sans facteur pronostique avec au moins un facteur de gravité majeur
-      else if (fac_maj > 0) return { res3: responce.res3, res9: responce.res9 };
+      if (fac_maj > 0) return { res3: responce.res3, res9: responce.res9 };
     }
     // end Tout patient sans facteur pronostique
   }
   // Tout patient avec fièvre et toux
-  else if (arr[1] === "Oui" && arr[3] === "Oui") {
+  if (arr[1] === "Oui" && arr[3] === "Oui") {
     // Tout patient sans facteur pronostique
     if (fac_prono === 0) {
       // Sans facteur de gravité ou au moins 1 facteur de gravité mineur sans facteur de gravité majeur
       if (fac_maj === 0 && fac_min >= 0)
         return { res2: responce.res2, res9: responce.res9 };
       // Tout patient avec ou sans facteur pronostique avec au moins un facteur de gravité majeur
-      else if (fac_maj > 0) return { res3: responce.res3, res9: responce.res9 };
+      if (fac_maj > 0) return { res3: responce.res3, res9: responce.res9 };
     }
     // Tout patient avec un facteur pronostique ou plus :
-    else if (fac_prono >= 1) {
+    if (fac_prono >= 1) {
       // Aucun facteur de gravité  or Un seul facteur de gravité mineur:
       if (fac_maj === 0 && fac_min <= 1)
         return { res2: responce.res2, res9: responce.res9 };
       // Au moins deux facteurs de gravité mineurs
-      else if (fac_min > 1) return { res3: responce.res3, res9: responce.res9 };
+      if (fac_min > 1) return { res3: responce.res3, res9: responce.res9 };
       // Tout patient avec ou sans facteur pronostique avec au moins un facteur de gravité majeur
-      else if (fac_maj > 0) return { res3: responce.res3, res9: responce.res9 };
+      if (fac_maj > 0) return { res3: responce.res3, res9: responce.res9 };
     }
   }
   // Tout patient avec un seul symptôme parmi fièvre, toux, mal de gorge, courbatures
-  else if (
+  if (
     arr[1] === "Oui" ||
     arr[3] === "Oui" ||
     arr[4] === "Oui" ||
@@ -98,7 +98,7 @@ export const checkAnswer = (arr) => {
     if (fac_maj + fac_min === 0)
       return { res5: responce.res5, res9: responce.res9 };
     // Au moins un facteur de gravité ou un facteur pronostique
-    else if (fac_maj + fac_min > 0 || fac_prono > 0)
+    if (fac_maj + fac_min > 0 || fac_prono > 0)
       return { res6: responce.res6, res9: responce.res9 };
   }
   // Tout patient avec aucun symptôme
